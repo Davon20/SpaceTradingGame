@@ -6,9 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpaceTradingGame", "SpaceTradingGame\SpaceTradingGame.csproj", "{A5A7D40E-7378-489E-B731-109E3D54ED9B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B955D04E-2B96-4CFA-8977-D6DCB6090E02}"
-	ProjectSection(SolutionItems) = preProject
-		StoryOutline.txt = StoryOutline.txt
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
