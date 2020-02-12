@@ -1,7 +1,15 @@
 Space Traders STRUCTURE
 START of the story
-1. Allen receives a space ship from his father for his 18th birthday. Prompting allen to leave earth and dive into the world of Space Trading.
-2. It is well known that novice space traders
+1. Allen receives a space ship from his father for his 18th birthday. Prompting allen to leave earth and dive into the world of Space Trading. His father also gave him 50,000
+   credits as a gift along with his ship.
+2. It is well known that novice space traders must go to Dathomir, home of the Galactic Trade Federation (GTF), in order to beging their career as a space trader. In order to  
+   conduct trade, every space trader must have a trade license issued from by the GTF. The tradinng license costs allen 5,000 credits.
+3.In Dathomir, he makes friends with a new trader by the name of Chuy, who has experience with space trading because he grew up along side his father, who was a space trader.
+4.Chuy teachers Allen about how Space Trading works.
+	a.Chuy explains to allen that the status/ noteriety of a space trader is based on 5 different levels:
+		1. novice/beginner- this is the state where all Space Traders Begin
+		2.
+		
 
 
 
@@ -38,7 +46,5 @@ a.		he pays better than the space police
 		i.	residents can volunteer into indentured servitude to powerful citizens to gain or regain their status as a citizen
 		ii.	Resident must enlist into the Space Police at age 18.
 			1.	(see number number 5 above for details on resident life in the space police)
-8.	How to introduce background
-	a.	incorporate story as the player progresses through the game.
-	b. test for purpose of my sanity.
+8.	
 
