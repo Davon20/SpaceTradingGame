@@ -27,4 +27,5 @@ a.		he pays better than the space police
 			1.	(see number number 5 above for details on resident life in the space police)
 8.	How to introduce background
 	a.	incorporate story as the player progresses through the game.
+	b. test for purpose of my sanity.
 
