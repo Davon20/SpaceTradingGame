@@ -47,31 +47,36 @@ START of the story
 			h. When Allen reaches lothar, he quickly spots Carrie's shipment, however he notices that there are a group scavengers blocking off the shipment, and attempting to
 			   break into the cargo.
 			i. Allen runs up the group, and attempts to address the group. Allen has two options:
-				1.	Take an agressive stance and yell at the group, demanding them to stop.
-					a. If allen decides to yell at the group, the entire group turns their attention to Allen. Allen notices that they are armed with electrified pole staffs.
-					   Allen slowly backs away as the group begins menacingly get closer to allen, brandishing their weapons. Allen then decides to turn around and run back to the
-					   transportation service that brough him there, however he sees the drive take off nervously, leaving a trail of dust behind him. Allen turns around just in 
-					   time to catch the end of one of the elctrified batons, the strike Knocks Allen to the ground. The game prompts allen with two options:
-						1. Curl up into a Ball
-							a. The mob begins to pummel him more.
-								1. He has two options again:
-									a. Curl up into a ball
-										1. the group pummels him even harder, everything begins to go dark, as his consciousness slowly slips away
-											a. the console appears with big words in Red: "YOU HAVE DIED, YOU LOSE"
-									b. Attemp to snatch one of the batons away,
-										1. the group begins to pummel AND electrecute him, everything begins to go dark, as his consciousness slowly slips away
-											a  the console appears with big words in Red: "YOU HAVE DIED, YOU LOSE"
-					    2. Attempt to snatch one of the batons away.
-							a. The mob begins to electrecute him more.
-								1. He has two options again:
-									a. Curl up into a ball
-										1. the group pummels him even harder, everything begins to go dark, as his consciousness slowly slips away
-											a. the console appears with big words in Red: "YOU HAVE DIED, YOU LOSE"
-									b. Attemp to snatch one of the batons away,
-										1. the group begins to pummel AND electrecute him. everything begins to go dark, as his consciousness slowly slips away
-											a  the console appears with big words in Red: "YOU HAVE DIED, YOU LOSE"
-			  2. Ask someone in the group who is in charge.
-				a. 
+				a. yell at the group and demand for them to move away from the shipment
+				|	1. The Group ignores him.
+				|		a.Allen can continue to yell, however the group will continue to ignore allen 
+				OR		OR
+				|		b.Allen can ask the group why they are raiding the shipment
+				|
+				b. Slowly approach the group and ask to speak to one of them				
+						a.Allen can ask the individual why they are raiding that shipment if it doesnt belong to them.
+						|	b. The individual will explain that the group makes its money by scavenging and looting abondoned shipments.
+						|		1.Allen tells the individual that the shipment belongs to a friend of his, and he needs return the shipment back to the rightful owner
+						|		|	a. the individual tells Allen that if he pays him 5,000 credits, then they will leave the shipment alone.
+						|		|		1. Allen can agree to this, pay the 5,000 credits, and load the cargo up to his transportation method, and returns to the docking zone.
+						|		|		2. Allen can refuse to pay, causing the individual to get irritated, and tell allen to leave.
+						|		|			a. Allen apologizes, and tells the individual he will pay
+						|		|				b. The individual states that the prive now rose to 6,000 credits
+						|	    OR					c. Allen reluctantly agrees and pays the individual 6,000 credits, loads the cargo to his tranportation method, and returns to 
+						|		|					   docking zone.
+						|		|			
+						OR		|	
+						|		|
+						|       |
+						|		2.Allen demands that the individual return the shipment.
+						|			a.The individual gets upset, and tells allen that he and the group will leave if he pays them 7,000 credits.
+						|				1. 
+						b. Allen can demand that they step away from the shipment
+							c. The individual will aggresively tell allen no, and demand that allen Leave.
+								1.Allen can continue to yell
+								OR
+								2. Allen can ask why they are raiding the shipment if it doesnt belong to them
+						
 
 
 
