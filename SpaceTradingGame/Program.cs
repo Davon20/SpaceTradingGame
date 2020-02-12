@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace SpaceTradingGame
 {
@@ -6,9 +9,16 @@ namespace SpaceTradingGame
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.WriteLine("test"); 
+           /*Structure of Code: Objects -> Classses -> Methods 
+            
+            Project Classes: 
+                Planets
+                Characters
+                Trade Material
+                Level System
+                Market System
+                
+           */
         }
-        
     }
 }
