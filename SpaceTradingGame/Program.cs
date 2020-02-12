@@ -8,6 +8,7 @@ namespace SpaceTradingGame
         {
             Console.WriteLine("Hello World!");
             Console.WriteLine("test");
+
         }
     }
 }
