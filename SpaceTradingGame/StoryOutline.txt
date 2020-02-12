@@ -1,4 +1,98 @@
-Space Traders
+Space Traders STRUCTURE
+START of the story
+1. Allen receives a space ship from his father for his 18th birthday. Prompting allen to leave earth and dive into the world of Space Trading. His father also gave him 50,000
+   credits as a gift along with his ship.
+2. It is well known that novice space traders must go to Dathomir, home of the Galactic Trade Federation (GTF), in order to beging their career as a space trader. In order to  
+   conduct trade, every space trader must have a trade license issued from by the GTF. The tradinng license costs allen 5,000 credits.
+3.In Dathomir, he makes friends with a new trader by the name of Chuy, who has experience with space trading because he grew up along side his father, who was a space trader.
+4.Chuy teachers Allen about how Space Trading works.
+	a.Chuy explains to allen that the status/ noteriety of a space trader is based on 5 different levels:
+		1. novice/beginner- this is the state where all Space Traders Begin. At this level, the trader will sell each product at 200% of the original price, however, the GTF
+		   will take 30% of the profit. So if the Allen buy an apple for 10 credits, he can sell if for 20 credits, and 3 of those credits will go to the GTF.
+		2.intermediate - 
+		3. advanced-
+		4. master-
+		5. legendedary
+	b. Chuy also explains that as he moves up in noteriety with the GTF, additonal planets will be avaible to him. As a Novice, he will only have acces to 5 planets. Earth, 
+	   Alpha Centuria 1, Dathomir, Tatooine, and Alderan. Each planet has a varying degree of expense for products and services. 
+	   1. Chuy does not know what other plantes are avaialable, however he heard that with everytime a trader rises in status, they receive a message from the GTF, congratulating
+	      as well as giving them the coordinates of new planets and names of the planets where they can conduct trade.
+	c. Chuy asks Allen if he is familiar with the navigation system on his ship.
+		1. If allen says yes, then chuy will wish him good luck, and Allen will head to his ship. Before they depart, Chuy mentions to Allen that he should go to alderan because
+		   he knows a friend named Carried, who is an intermediate space trader. She has a trade opportunity avaiable there.
+		2. If Allen says no, chuy will walk with Allen to his ship, and show him how to Navigate systems.
+	d. Chuy will walk Allen through the operating fuctions of  the navigation features of his ship.
+		1. The navigation feature is a simple menu that lists the names of the planets depending on the status level of the trader. Since Allen is a novice, the navigation system
+		   will only have the first 5 original planets: Earth, Alpha Centuria 1, Dathomir, Tattooine, and Alderan.
+		2. The navigation system prompts the user to choose the planet based on [either a scroll like menu, or a number based menu].
+			a. When Allen chooses a planet, the navigation will ask Allen "Are you sure you want to travel to [planets name] Y/N"
+				1. If allen chooses yes, then the ship will travel to Allens destination
+				2. If allen chooses no, then the menu will return to the planet selection menu
+	   3. Chuy mentions to Allen that if he is going to Alderan, he has a friend named Carrie who is an intermediate space trader, and will give Alan his first major trading 
+		  opportunity.
+	   4. Chuy wishes Allen good luck with his joruney and leaves Allens ship.
+	   5. Allen decides that Alderan would be a great first place to start his career as a Space Trader, and sets his navigation to travel to Alderan
+	   6. As allen exits his ship, he sees someone waiting for him, he thinks to himself that is must be carrie.
+	   7. Carrie introduces herselft to allen and asks allen if he is interested in making his first profit.
+	   8. Allen replies with yes, and Carrie begins to explain the deal.
+			a. Carrie states that she has a lucrative opportunity for Allen. She has a shipment of clothing coming in that she will need to sell to the Grand Viziers wife. 
+			   However, there is an issue, they delivered the cargo on the wrong side of the planet, a city called Lothar. Carrie tells Allen that if he picks up the shipment for her, she will give
+			   her, she will give him 20,000 credits. She also mentioned since this is a service deal, and not a trade transaction, that there will be no tax collection from the GTF, since the GTF
+			   only collects taxes on trade transactions. She will end the conversation with asking allen if he is interested , [Yes/ Hell yes/]
+			b. Allen will have no other choice but to choose hell yes.
+			c. Carrie Tells Allen that she heard there was a good transportation service located just outside the docking zone. 
+			e. Allen heads to the transporation service downtown, and begins to speak with the service provider.
+			f. The transportation service employee informs allen that the transportation fee will be 500 credits per trip, so 1000 credits total.
+			g. Allen has no choice but to accept the deal, but tell the employee that he will pay half now, and half when they return. The employee agrees.
+			h. When Allen reaches lothar, he quickly spots Carrie's shipment, however he notices that there are a group scavengers blocking off the shipment, and attempting to
+			   break into the cargo.
+			i. Allen runs up the group, and attempts to address the group. Allen has two options:
+				a. yell at the group and demand for them to move away from the shipment
+				|	1. The Group ignores him.
+				|		a.Allen can continue to yell, however the group will continue to ignore allen 
+				OR		OR
+				|		b.Allen can ask the group why they are raiding the shipment
+				|
+				b. Slowly approach the group and ask to speak to one of them				
+						a.Allen can ask the individual why they are raiding that shipment if it doesnt belong to them.
+						|	b. The individual will explain that the group makes its money by scavenging and looting abondoned shipments.
+						|		1.Allen tells the individual that the shipment belongs to a friend of his, and he needs return the shipment back to the rightful owner
+						|		|	a. the individual tells Allen that if he pays him 5,000 credits, then they will leave the shipment alone.
+						|		|		1. Allen can agree to this, pay the 5,000 credits, and load the cargo up to his transportation method, and returns to the docking zone.
+						|		|		2. Allen can refuse to pay, causing the individual to get irritated, and tell allen to leave.
+						|		|			a. Allen apologizes, and tells the individual he will pay
+						|		|				b. The individual states that the prive now rose to 6,000 credits
+						|	    OR					c. Allen reluctantly agrees and pays the individual 6,000 credits, loads the cargo to his tranportation method, and returns to 
+						|		|					   docking zone.
+						|		|			
+						OR		|	
+						|		|
+						|       |
+						|		2.Allen demands that the individual return the shipment.
+						|			a.The individual gets upset, and tells allen that he and the group will leave if he pays them 7,000 credits.
+						|				1. 
+						b. Allen can demand that they step away from the shipment
+							c. The individual will aggresively tell allen no, and demand that allen Leave.
+								1.Allen can continue to yell
+								OR
+								2. Allen can ask why they are raiding the shipment if it doesnt belong to them
+						
+
+
+
+		
+
+		
+
+
+
+
+
+
+
+
+
+OUTLINE
 1.	Allen has to find a way to improve the standard of the living of the general population (which is the poor)
 	a.	allen is the son of a citizen, fighting for residents because he doesn’t feel like everyone should be separated.
 2.	Galactic Trade Federation Is a neutral party in the war between the space police and the resident rebel. 
@@ -8,6 +102,7 @@ Space Traders
 a.		he pays better than the space police
 6.	There is an intergalactic civil war going on, allen sells weapons to both sides.
 	a.	the bulk of the rebel forces are residents
+	b.	
 7.	There are two types of people in space: citizens and residents
 	a.	Citizens
 	i.	they have additional rights
@@ -24,6 +119,5 @@ a.		he pays better than the space police
 		i.	residents can volunteer into indentured servitude to powerful citizens to gain or regain their status as a citizen
 		ii.	Resident must enlist into the Space Police at age 18.
 			1.	(see number number 5 above for details on resident life in the space police)
-8.	How to introduce background
-	a.	incorporate story as the player progresses through the game.
-	b. test for purpose of my sanity.
+8.	
+
