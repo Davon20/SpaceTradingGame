@@ -1,5 +1,7 @@
 Space Traders STRUCTURE
 START of the story
+***One year in this world is measured by the number of moves the player takes. Allens time in Alderan counts as a tutorial, by the end of the tutorial, a year would have passed
+   and the moves he makes there wont be counted towards his year WIN Condition is making 6,000,000 credits before the age of 65****
 1. Allen receives a space ship from his father for his 18th birthday. Prompting allen to leave earth and dive into the world of Space Trading. His father also gave him 50,000
    credits as a gift along with his ship.
 2. It is well known that novice space traders must go to Dathomir, home of the Galactic Trade Federation (GTF), in order to beging their career as a space trader. In order to  
@@ -8,40 +10,41 @@ START of the story
 4.Chuy teachers Allen about how Space Trading works.
 	a.Chuy explains to allen that the status/ noteriety of a space trader is based on 5 different levels:
 		1. novice/beginner- this is the state where all Space Traders Begin. At this level, the trader will sell each product at 200% of the original price, however, the GTF
-		   will take 30% of the profit. So if the Allen buy an apple for 10 credits, he can sell if for 20 credits, and 3 of those credits will go to the GTF.
-		2.intermediate - 
-		3. advanced-
-		4. master-
-		5. legendedary
+		   will take 30% of the profit. 10 allowed trade transactions per year. 
+		2. intermediate - Once he makes 1,000,000 credits, he advances to intermediate :300% of original price, 25% taxes by the GTF, 20 trade interactions per 
+		   year
+		3. advanced- Once he makes 3,000,000 credits, he advances to advanced Space Trader :400% of original price, 20% taxes by the GTF, 30 trade interactions 
+		   per year
 	b. Chuy also explains that as he moves up in noteriety with the GTF, additonal planets will be avaible to him. As a Novice, he will only have acces to 5 planets. Earth, 
-	   Alpha Centuria 1, Dathomir, Tatooine, and Alderan. Each planet has a varying degree of expense for products and services. 
+	   Alpha Centuria 1, Dathomir, Tatooine, Alderan, Sentinel 3, and September.Additonally, he will only be able to access each planet once he has accumulated a certain amount of wealth Each planet has a
+	   varying degree of expense for products and services. 
 	   1. Chuy does not know what other plantes are avaialable, however he heard that with everytime a trader rises in status, they receive a message from the GTF, congratulating
 	      as well as giving them the coordinates of new planets and names of the planets where they can conduct trade.
 	c. Chuy asks Allen if he is familiar with the navigation system on his ship.
-		1. If allen says yes, then chuy will wish him good luck, and Allen will head to his ship. Before they depart, Chuy mentions to Allen that he should go to alderan because
+		1. If allen says yes, then chuy will wish him good luck, and Allen will head to his ship. Before they depart, Chuy mentions to Allen that he should go to the docking zone in Dathomir because
 		   he knows a friend named Carried, who is an intermediate space trader. She has a trade opportunity avaiable there.
 		2. If Allen says no, chuy will walk with Allen to his ship, and show him how to Navigate systems.
 	d. Chuy will walk Allen through the operating fuctions of  the navigation features of his ship.
 		1. The navigation feature is a simple menu that lists the names of the planets depending on the status level of the trader. Since Allen is a novice, the navigation system
-		   will only have the first 5 original planets: Earth, Alpha Centuria 1, Dathomir, Tattooine, and Alderan.
+		   will only have the first 5 original planets: Earth, Alpha Centuria 1, Dathomir, Tatooine, Alderan, Sentinel 3, and September.
 		2. The navigation system prompts the user to choose the planet based on [either a scroll like menu, or a number based menu].
 			a. When Allen chooses a planet, the navigation will ask Allen "Are you sure you want to travel to [planets name] Y/N"
 				1. If allen chooses yes, then the ship will travel to Allens destination
 				2. If allen chooses no, then the menu will return to the planet selection menu
-	   3. Chuy mentions to Allen that if he is going to Alderan, he has a friend named Carrie who is an intermediate space trader, and will give Alan his first major trading 
-		  opportunity.
+	   3. Chuy mentions to Allen that he should go to the docking zone in Dathomir to meet with his friend Carrie, who is an intermediate Space Trader with a trade
+	      opportunity for him. 
 	   4. Chuy wishes Allen good luck with his joruney and leaves Allens ship.
-	   5. Allen decides that Alderan would be a great first place to start his career as a Space Trader, and sets his navigation to travel to Alderan
-	   6. As allen exits his ship, he sees someone waiting for him, he thinks to himself that is must be carrie.
-	   7. Carrie introduces herselft to allen and asks allen if he is interested in making his first profit.
+	   5. Allen decides that he should stay on Dathomir and talk with carrie to grab his first major trade opportunity.
+	   6. As allen exits his ship, and heads to the docking zone, he spots someone waving at him.
+	   7. The person waving to allen introduces herself as Carrie  asks allen if he is interested in making his first profit.
 	   8. Allen replies with yes, and Carrie begins to explain the deal.
 			a. Carrie states that she has a lucrative opportunity for Allen. She has a shipment of clothing coming in that she will need to sell to the Grand Viziers wife. 
 			   However, there is an issue, they delivered the cargo on the wrong side of the planet, a city called Lothar. Carrie tells Allen that if he picks up the shipment for her, she will give
 			   her, she will give him 20,000 credits. She also mentioned since this is a service deal, and not a trade transaction, that there will be no tax collection from the GTF, since the GTF
 			   only collects taxes on trade transactions. She will end the conversation with asking allen if he is interested , [Yes/ Hell yes/]
-			b. Allen will have no other choice but to choose hell yes.
+			b. Allen will have no other choice but to choose  yes.
 			c. Carrie Tells Allen that she heard there was a good transportation service located just outside the docking zone. 
-			e. Allen heads to the transporation service downtown, and begins to speak with the service provider.
+			e. Allen heads to the transporation service , and begins to speak with the service provider.
 			f. The transportation service employee informs allen that the transportation fee will be 500 credits per trip, so 1000 credits total.
 			g. Allen has no choice but to accept the deal, but tell the employee that he will pay half now, and half when they return. The employee agrees.
 			h. When Allen reaches lothar, he quickly spots Carrie's shipment, however he notices that there are a group scavengers blocking off the shipment, and attempting to
@@ -86,9 +89,24 @@ START of the story
 			j. Upon arrival to the docking station, Allen pays his driver the remaining 500 credits to complete the transportation service.
 			k. Carrie spots Allen and his shipment, and thanks him for his help. 
 			l. Carrie pays Allen the 20,000 credits she promised him.
-			m. Carrie mentions to Allen that there are more trade opportunities in a planet called Tattooine, and that he should go to the central market place
-			   located near the docking zone in Tattoine.
-			n. Allen return to his ship.
+			m. Carrie then walks allen over to a terminal. She explains to Allen that this is a Central Marketplace Terminal. and that every planet has one of them
+			   located near the docking zone. This is a traders tool to help expedite the trading process. She explains to Allen that the terminal has 3 menus, Buy
+			   Trade, and Sell. With this terminal he can conduct trade with everyone on the planet, however it is not intergalactic. She also mentions that each
+			   planet has certain items that are only available on that planet. He can sell those items on different planets at  marked up prices for a greater profit.
+			   She also mentions that per regulations enforced by the Galactic Trade Federation, as a novice he can only conduct 10 trade interactions per year.
+			n. Allen returns to his ship. This marks the end of the tutorial, the entire journey from Earth to Dathomir, as well as his first adventure has taken an 
+			   entire year. He is now 19, ready to continue his career as a space trader.
+######################																															#######################################
+######################												END TUTORIAL																#######################################
+######################																															#######################################
+		
+		
+																	DATHOMIR
+
+1. Allen wakes up in his ship, and has two options. Access Navigation System or Exit Ship
+	1. If allen chooses the Navigation System, a menu of plantes will appear. Dathomir, Alpha Centuria 1, Tattooine, Alderan
+						
+			   
 
 						
 
