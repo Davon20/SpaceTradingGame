@@ -104,7 +104,13 @@ START of the story
 																	DATHOMIR
 
 1. Allen wakes up in his ship, and has two options. Access Navigation System or Exit Ship
-	1. If allen chooses the Navigation System, a menu of plantes will appear. Dathomir, Alpha Centuria 1, Tattooine, Alderan
+	1. If allen chooses the Navigation System, a menu of plantes will appear. Dathomir, Alpha Centuria 1, Tattooine, Alderan, Sentinel 3, and September.
+	|	a. The menus have have the following planets grayed out: Alpha Centuria 1, Tattoine, Alderan, Sentinel 3, and September.
+	|		1. Alpha centuria one has a message next to it saying "Unlocked at 250,000 credits"
+   OR		2. Tattooine  has a message next to it saying "Unlocked at 500,000 credits"
+	|		3. Alderan has a message next to it saying "Unlocked at 750,000 credits"
+	|		4. Sentinel 3 and September both have a message next to it saying "Unlocked at intermediate and at 1,000,000 credits"
+	2.
 						
 			   
 
