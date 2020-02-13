@@ -1,7 +1,8 @@
 Space Traders STRUCTURE
 START of the story
 ***One year in this world is measured by the number of moves the player takes. Allens time in Alderan counts as a tutorial, by the end of the tutorial, a year would have passed
-   and the moves he makes there wont be counted towards his year WIN Condition is making 6,000,000 credits before the age of 65****
+   and the moves he makes there wont be counted towards his year WIN Condition is making 6,000,000 credits before the age of 65, LOSE Condition is if the player
+   at any point in the game goes below 0.****
 1. Allen receives a space ship from his father for his 18th birthday. Prompting allen to leave earth and dive into the world of Space Trading. His father also gave him 50,000
    credits as a gift along with his ship.
 2. It is well known that novice space traders must go to Dathomir, home of the Galactic Trade Federation (GTF), in order to beging their career as a space trader. In order to  
@@ -91,7 +92,7 @@ START of the story
 			l. Carrie pays Allen the 20,000 credits she promised him.
 			m. Carrie then walks allen over to a terminal. She explains to Allen that this is a Central Marketplace Terminal. and that every planet has one of them
 			   located near the docking zone. This is a traders tool to help expedite the trading process. She explains to Allen that the terminal has 3 menus, Buy
-			   Trade, and Sell. With this terminal he can conduct trade with everyone on the planet, however it is not intergalactic. She also mentions that each
+			   and Sell. With this terminal he can conduct trade with everyone on the planet, however it is not intergalactic. She also mentions that each
 			   planet has certain items that are only available on that planet. He can sell those items on different planets at  marked up prices for a greater profit.
 			   She also mentions that per regulations enforced by the Galactic Trade Federation, as a novice he can only conduct 10 trade interactions per year.
 			n. Allen returns to his ship. This marks the end of the tutorial, the entire journey from Earth to Dathomir, as well as his first adventure has taken an 
@@ -110,7 +111,57 @@ START of the story
    OR		2. Tattooine  has a message next to it saying "Unlocked at 500,000 credits"
 	|		3. Alderan has a message next to it saying "Unlocked at 750,000 credits"
 	|		4. Sentinel 3 and September both have a message next to it saying "Unlocked at intermediate and at 1,000,000 credits"
-	2.
+	2. If allen chooses to Exit Ship, he will head to the central terminal.
+		a. a menu will pop up prompting allen to access the central terminal.
+			1. Allen will choose to access the terminal menu. The terminal menu will have a Transaction counter at the top right starting at 0, with every 
+			   transaction. When allen Reaches 10, the console will show a message saying "You have reached your Transaction Limit, Try again letter" Every
+			   menu in the terminal will also display his bankroll and the top left.
+			2. The central marketplace menu will pop up displaying Buy, Sell.
+				a. Allen selects Buy
+					1. A list of products populates, with the price right next to it.
+						a. Allen can choose to buy items
+							1. every purchase he makes will be subtracted from his bank roll.
+							2. every purchase he makes will also contribue an increment of 1 to the Transaction counter. 
+						b. Allen can choose to return to the main menu.
+				b. Allen selects Sell 
+					1. A list of product populates, with its sell value right next ot it.
+						a. Allen can choose to sell items
+							1. every purchase he makes will add the value of the product to his bankroll.
+							2. every purchase he makes will contribute an increment of 1 to the Transaction Counter
+						b. Allen can choose to return to the main menu.
+		b. Once Allen Makes 250,000 credits, a message will appear saying he has unlocked a new planet
+			a. Allen can continue to do what he is doing, Allen can choose to return to his ship.
+			b. If allen return to his ship, he will automatically be in his nagivation system. The navigation system now shows Alpha Centuria 1.
+			c. Allen can choose to go to Alpha Centuria 1, OR, he can choose to stay on Dathomir.
+				b. If allen stays on Dathomir, his only options will be to continue to conduct trade in the Central Trade Marketplace.
+				c. If Allen chooses to travel to Alpha Centuria 1, he will travel to that planet.
+
+##########################################       ALPHA CENTURIA 1 /Dathomir    ###################################################################################
+1. When Allen lands and exits his ship, he will be in the docking zone. He spots the Central Trading Market. He also spots a shady individual in the corner of
+   the docking zone. Allen Can choose to go to the terminal, or he can choose to approach the shady individual.
+	a. Allen decides to go to the terminal and conduct trade on it.
+		1. after exiting the terminal, he can choose to return to the ship, or approach the shady individual.
+	b. Allen approaches the shady individual and asks what he is doing.
+		1. The shady individual introduced himself as  Han, he tells allen he is waiting for a special shipment
+			a. Allen inquires about the special shipment.
+				1. Han tells allen that this shipment is special because it will make him a lot of money, but he has to keep it a secret.
+					a. Allen asks Han what kind of shipment it is, and why he has to keep it a secere.t
+						1. Han realizes that Allen is a novice Space Trader, and sees it as a business opportunity. He asks Allen if he wants to make a lot of money
+							in one transaction, away from the eyes of the Galactic Trade Federation.
+							a. Allen agrees, but again asks why there is so much secracy behind this.
+							b. Han tells Allen that is a smuggler, working as a Space Pirate. The shipment he is expecting is a stolen cache of weapons that his 
+							   partners stole from a Space Police Patrol. He mentions that he has a buyer lined up in Dathomir who is willing to buy this shipment.
+							   Han tells Allen that if he is willing to take the stolen cache of weapons and delive it to his un-named buyer in dathomir, that he will
+							   pay him 250,000 credits for his help.
+							c. Allen Agrees to this, and as the shipment arrives, he loads the cargo in his ship.
+							d. Allen sets his navigation system to head to Dathomir.
+								
+
+					
+
+
+				
+
 						
 			   
 
