@@ -9,15 +9,15 @@ namespace SpaceTradingGame
     {
         static void Main(string[] args)
         {
+            Console.SetCursorPosition(12, 2);
+            Console.Beep(); 
+            Console.WriteLine("Made some noise!");
             /*Structure of Code: Objects -> Classses -> Methods 
 
-             Project Classes:
-                     
-                Organizations(includes Characters): 
-                         
+             Project Classes: Strecth Goals                     
+                Organizations(includes Characters):
                     - Space Police, Space Pirates, & Galatic Trading Federation
                     
-                    - Characters: Allen, NPC's = Carrie, Chuy, Transportation Service Guy, Scavenger
                     
                     - Status: 
                         Novice(Arms Deals = $250k Credits, Taxes = 30%, Income = 100%, License = 5k Credits, Terminal Access = 10 Moves) 
