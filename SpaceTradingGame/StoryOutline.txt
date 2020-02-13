@@ -52,7 +52,10 @@ START of the story
 				|		a.Allen can continue to yell, however the group will continue to ignore allen 
 				OR		OR
 				|		b.Allen can ask the group why they are raiding the shipment
-				|
+				|			1. An idividual from the group approaches Alan, and explains to Allen that the group makes its money by scavenging and looting abandoned shipments.
+				|				a. Allen tells the individual that he will pay him 5,000 credits to leave the shipment alone.
+				|				b. The individual disagrees and tells Allen that if he pays 7,000 credits, he will order his group to leave the shipment alone
+				|				c. Allen agrees, loads the shipment onto his transportation vehicle and returns to the docking station.
 				b. Slowly approach the group and ask to speak to one of them				
 						a.Allen can ask the individual why they are raiding that shipment if it doesnt belong to them.
 						|	b. The individual will explain that the group makes its money by scavenging and looting abondoned shipments.
@@ -61,7 +64,7 @@ START of the story
 						|		|		1. Allen can agree to this, pay the 5,000 credits, and load the cargo up to his transportation method, and returns to the docking zone.
 						|		|		2. Allen can refuse to pay, causing the individual to get irritated, and tell allen to leave.
 						|		|			a. Allen apologizes, and tells the individual he will pay
-						|		|				b. The individual states that the prive now rose to 6,000 credits
+						|		|				b. The individual states that the price now rose to 6,000 credits
 						|	    OR					c. Allen reluctantly agrees and pays the individual 6,000 credits, loads the cargo to his tranportation method, and returns to 
 						|		|					   docking zone.
 						|		|			
@@ -70,12 +73,23 @@ START of the story
 						|       |
 						|		2.Allen demands that the individual return the shipment.
 						|			a.The individual gets upset, and tells allen that he and the group will leave if he pays them 7,000 credits.
-						|				1. 
+						|				1. Allen agrees, pays the individual 7,000 credits, and loads the cargo up on his transportation method, and returns to the docking zone.
 						b. Allen can demand that they step away from the shipment
 							c. The individual will aggresively tell allen no, and demand that allen Leave.
 								1.Allen can continue to yell
+								|	a. The group continoues to ignore Allen
 								OR
-								2. Allen can ask why they are raiding the shipment if it doesnt belong to them
+								2. Allen can ask why they are raiding the shipment if it doesnt belong to them.
+									a.An idividual from the group approaches Alan, and explains to Allen that the group makes its money by scavenging and looting abandoned shipments.
+									b. Allen offers to pay 8,000 credits  to the group if they leave the shipment alone.
+									c. The groups agrees, and allen loads the shipment onto his transportation vehcile and returns to the docking zone.
+			j. Upon arrival to the docking station, Allen pays his driver the remaining 500 credits to complete the transportation service.
+			k. Carrie spots Allen and his shipment, and thanks him for his help. 
+			l. Carrie pays Allen the 20,000 credits she promised him.
+			m. Carrie mentions to Allen that there are more trade opportunities in a planet called Tattooine, and that he should go to the central market place
+			   located near the docking zone in Tattoine.
+			n. Allen return to his ship.
+
 						
 
 
