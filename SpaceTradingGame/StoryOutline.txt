@@ -145,7 +145,7 @@ START of the story
 		1. The shady individual introduced himself as  Han, he tells allen he is waiting for a special shipment
 			a. Allen inquires about the special shipment.
 				1. Han tells allen that this shipment is special because it will make him a lot of money, but he has to keep it a secret.
-					a. Allen asks Han what kind of shipment it is, and why he has to keep it a secere.t
+					a. Allen asks Han what kind of shipment it is, and why he has to keep it a seceret.
 						1. Han realizes that Allen is a novice Space Trader, and sees it as a business opportunity. He asks Allen if he wants to make a lot of money
 							in one transaction, away from the eyes of the Galactic Trade Federation.
 							a. Allen agrees, but again asks why there is so much secracy behind this.
