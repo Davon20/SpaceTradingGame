@@ -4,35 +4,45 @@ using System.Text;
 
 namespace SpaceTradingGame
 {
-    class Status
+    public class Status
     {
-        public void moveCounter()
+        public static void moveCounter()
         {
-
+            int years = 18; 
+            int moves = 5;
+            for (int i = 0; moves > 0; i++)
+            {
+                Console.WriteLine($"You have {moves -=1} moves remaining.");
+            }
+            if (moves == 0)
+            {
+                for (int j = 0; years < 65; j++)
+                {
+                    Console.WriteLine($"You are out of moves and are now {years += 1} years old.");
+                }
+            }
         }
-        public void tradeCounter()
+        public static void tradeCounter()
         {
+            int totalTrades = 10;
 
+            for (int i = 0; totalTrades > 0; i++)
+            {
+                Console.WriteLine($"You have { totalTrades -=1 } trades remaining.");
+            }
         }
-        public void taxAlgorithm() 
+        public static void Inventory()
         {
-            
+            string[] items = new string[] { "fruit", "meat", "jewels", "rifles", "pistols", "explosives", "missiles", "land", "residents", "mining tools",  };
+            foreach (string item in items)
+            {
+                Console.WriteLine(item);
+            }
         }
-        public void Inventory()
+        public static void bankRoll()
         {
-
-        }
-        public void level()
-        {
-
-        }
-        public void Return()
-        {
-
-        }
-        public void planetAccess()
-        {
-
+            int playerMoney = 50000;
+            Console.WriteLine(playerMoney);
         }
     }
 }
