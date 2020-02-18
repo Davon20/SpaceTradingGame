@@ -11,9 +11,16 @@ namespace SpaceTradingGame
         static void Main(string[] args)
         {
             Menu.UserMenu();
-            Console.SetCursorPosition(12, 2);
-            Console.Beep(); 
-            Console.WriteLine("Made some noise!");
+            
+            Console.Beep();
+            Console.SetCursorPosition(12, 32);
+            Console.WriteLine("You made a noise!");
+
+            var earth = new Planets { name = "Earth" };
+            var playerStatus = new Status();
+
+            tradingTerminal.TerminalMenu(earth, playerStatus);
+
             /*Structure of Code: Objects -> Classses -> Methods 
 
              Project Classes: Strecth Goals                     
@@ -54,6 +61,7 @@ namespace SpaceTradingGame
                     For Loop 
                     Console.Clear();
             */
+        
         }
     }
 }

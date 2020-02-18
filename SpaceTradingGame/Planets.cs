@@ -7,6 +7,8 @@ namespace SpaceTradingGame
 {
     class Planets //Allen is the object that goes to every planet. Allen.Earth = new Plot(); 
     {
+        public string name;
+
         public static void Earth() //if(tradeMenu(pressed b) -> Needs to display bankRoll, Buy/Sell Buttons
         {
             Console.WriteLine("Hello");
