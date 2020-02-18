@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+
 namespace SpaceTradingGame
 {
     class Program
     {
         static void Main(string[] args)
         {
+            Menu.UserMenu();
             Console.SetCursorPosition(12, 2);
             Console.Beep(); 
             Console.WriteLine("Made some noise!");
