@@ -45,5 +45,28 @@ namespace SpaceTradingGame
             int playerMoney = 50000;
             Console.WriteLine(playerMoney);
         }
+        public static void ship()
+        {
+            Console.WriteLine("1: Check Inventory" + "\n2: Check Bankroll" + "\n3: Travel");
+            string input = Console.ReadLine();
+            if (input == "1")
+            {
+                Inventory();
+            }
+            else if (input == "2")
+            {
+                bankRoll(); 
+            }
+            else if (input == "3")
+            {
+                Console.WriteLine("Input the planets the user will travel to.");
+            }
+            else
+            {
+                Console.WriteLine("Please enter only 1, 2, or 3.");
+                ship(); 
+            }
+            //int coordinates;
+        }
     }
 }

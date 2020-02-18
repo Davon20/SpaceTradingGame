@@ -10,6 +10,7 @@ namespace SpaceTradingGame
         public static void Earth() //if(tradeMenu(pressed b) -> Needs to display bankRoll, Buy/Sell Buttons
         {
             Console.WriteLine("Hello");
+            // REquires if statement: Status.tradeCounter();
         }
         public static void alphaCenturia()//if(tradeMenu(pressed b) -> Needs to display bankRoll, Buy/Sell Buttons
         {

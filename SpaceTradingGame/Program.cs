@@ -14,6 +14,7 @@ namespace SpaceTradingGame
             Console.SetCursorPosition(12, 2);
             Console.Beep(); 
             Console.WriteLine("Made some noise!");
+
             /*Structure of Code: Objects -> Classses -> Methods 
 
              Project Classes: Strecth Goals                     
