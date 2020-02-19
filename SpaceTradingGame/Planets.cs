@@ -24,11 +24,11 @@ namespace SpaceTradingGame
         }
         public static void Dathomir()//if(tradeMenu(pressed b) -> Buy/Sell Buttons
         {
-            string[] terminalItems = new string[] { "High-Grade Fuel", "Dathomir Land", "Dathomir Residents", "Expensive Meat", "Expensive Fruit" };
-            foreach (string items in terminalItems)
-            {
-                Console.WriteLine(items);
-            }
+            //string[] terminalItems = new string[] { "High-Grade Fuel", "Dathomir Land", "Dathomir Residents", "Expensive Meat", "Expensive Fruit" };
+            //foreach (string items in terminalItems)
+            //{
+            //    Console.WriteLine(items);
+            //}
         }
         public static void Tatooine()//if(tradeMenu(pressed b) -> Buy/Sell Buttons
         {

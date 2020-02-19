@@ -39,6 +39,7 @@ namespace SpaceTradingGame
         public static void Inventory()
         {
             string[] items = new string[] { "fruit", "meat", "jewels", "rifles", "pistols", "explosives", "missiles", "land", "residents", "mining tools", };
+            
             foreach (string item in items)
             {
                 Console.WriteLine(item);

@@ -29,7 +29,7 @@ namespace SpaceTradingGame
         {
             Status status = new Status();
             int currency = status.playerMoney;
-
+            
 
            
         }
