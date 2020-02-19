@@ -67,7 +67,7 @@ namespace SpaceTradingGame
                     For Loop 
                     Console.Clear();
             */
-        
+
         }
     }
 }
