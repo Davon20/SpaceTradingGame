@@ -18,21 +18,11 @@ namespace SpaceTradingGame
         }
         public static void alphaCenturia()//if(tradeMenu(pressed b) -> Buy/Sell Buttons
         {
-            Status status = new Status();
-            int fruit = Status.fruit;
-            int meat = Status.meat;
-            int jewels = Status.jewels;
-            int rifles = Status.rifles;
-            int pistols = Status.pistols;
-            int explosives = Status.explosives;
-            int missiles = Status.missiles;
-            int land = Status.land;
-            int residents = Status.residents;
-            int miningTools = Status.miningTools; 
+            int highGradeFuel = 1000;
 
 
             string[] terminalItems = new string[] { "High-Grade Fuel", "alphaCenturia Land", "alphaCenturia Residents", "Rifle", "Ship Missiles" };
-            int[] items = new int[] { fruit, meat, jewels, rifles, pistols, explosives, missiles, land, residents, miningTools };
+            int[] items = new int[] { highGradeFuel };
             
             for (int i = 0; i < items.Length; i++)
             {
