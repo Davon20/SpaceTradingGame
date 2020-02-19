@@ -5,7 +5,7 @@ using System.IO;
 
 namespace SpaceTradingGame
 {
-    class Planets //Allen is the object that goes to every planet. Allen.Earth = new Plot(); 
+    public class Planets //Allen is the object that goes to every planet. Allen.Earth = new Plot(); 
     {
         public string name;
 
@@ -16,10 +16,26 @@ namespace SpaceTradingGame
         }
         public static void alphaCenturia()//if(tradeMenu(pressed b) -> Buy/Sell Buttons
         {
+            Status status = new Status();
+            int fruit = Status.fruit;
+            int meat = Status.meat;
+            int jewels = Status.jewels;
+            int rifles = Status.rifles;
+            int pistols = Status.pistols;
+            int explosives = Status.explosives;
+            int missiles = Status.missiles;
+            int land = Status.land;
+            int residents = Status.residents;
+            int miningTools = Status.miningTools; 
+
+
             string[] terminalItems = new string[] { "High-Grade Fuel", "alphaCenturia Land", "alphaCenturia Residents", "Rifle", "Ship Missiles" };
-            foreach (string items in terminalItems)
+            int[] items = new int[] { fruit, meat, jewels, rifles, pistols, explosives, missiles, land, residents, miningTools };
+            
+            for (int i = 0; i < items.Length; i++)
             {
-                Console.WriteLine(items);
+                Console.Write($"{items[i]}: ");
+                Console.WriteLine(terminalItems[i]);
             }
         }
         public static void Dathomir()//if(tradeMenu(pressed b) -> Buy/Sell Buttons
