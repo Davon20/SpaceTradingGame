@@ -15,7 +15,7 @@ namespace SpaceTradingGame
         {
             for (int i = 0; moves > 0; i++)
             {
-                Console.WriteLine($"You have {moves -= 1} moves remaining.");
+                Console.WriteLine($" {moves -= 1}");
 
             }
             if (moves == 0)
@@ -44,10 +44,7 @@ namespace SpaceTradingGame
                 Console.WriteLine(item);
             }
         }
-        public void bankRoll()
-        {
-            Console.WriteLine(playerMoney);
-        }
+      
         public static void ship()
         {
             Console.WriteLine("1: Check Inventory" + "\n2: Check Bankroll" + "\n3: Travel");
@@ -58,7 +55,8 @@ namespace SpaceTradingGame
             }
             else if (input == "2")
             {
-                bankRoll(); 
+                
+                //Console.WriteLine($"You have {Status.");
             }
             else if (input == "3")
             {
