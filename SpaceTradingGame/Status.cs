@@ -55,8 +55,9 @@ namespace SpaceTradingGame
             }
             else if (input == "2")
             {
-                
-                //Console.WriteLine($"You have {Status.");
+                Status status = new Status();
+                int currency = status.playerMoney;
+                Console.WriteLine($"You have {currency}");
             }
             else if (input == "3")
             {
