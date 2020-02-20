@@ -12,6 +12,7 @@ namespace SpaceTradingGame
         public int moves = 5;
         public int years = 18;
         public int playerMoney = 50000;
+        public int totalTrades = 10;
 
         public static int fruit = 5;
         public static int meat = 10;
@@ -39,9 +40,9 @@ namespace SpaceTradingGame
                 }
             }
         }
-        public static void tradeCounter()
+        public  void tradeCounter()
         {
-            int totalTrades = 10;
+            
 
             for (int i = 0; totalTrades > 0; i++)
             {
