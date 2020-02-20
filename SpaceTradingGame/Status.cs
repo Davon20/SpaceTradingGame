@@ -10,6 +10,7 @@ namespace SpaceTradingGame
         public int moves = 5;
         public int years = 18;
         public int playerMoney = 50000;
+        public (int, int) coordinates = (0, 0);
 
         public static int fruit = 5;
         public static int meat = 10;
