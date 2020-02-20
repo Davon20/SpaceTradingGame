@@ -18,6 +18,7 @@ namespace SpaceTradingGame
         }
         public static void alphaCenturia()//if(tradeMenu(pressed b) -> Buy/Sell Buttons
         {
+
             (int, int) coordinates = (183, 147);
 
             Status status = new Status();
@@ -119,8 +120,6 @@ namespace SpaceTradingGame
                 Console.WriteLine(terminalItems[i]);
             }
 
-            //If the user selects a product = Product Cost - playerMoney
-
             int userInput = int.Parse(Console.ReadLine()); 
             if (userInput == 1)
             {
@@ -175,10 +174,6 @@ namespace SpaceTradingGame
             int missiles = 5000;
             int pistol = 750;
             
-
-
-
-
             string[] terminalItems = new string[] { "High-Grade Fuel", "September Land", "September Residents", "Missiles", "Pistol" };
             int[] items = new int[] { highGradeFuel, land, residents, missiles, pistol };
 
