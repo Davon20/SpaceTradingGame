@@ -16,9 +16,8 @@ namespace SpaceTradingGame
             Console.WriteLine("Hello");
             // REquires if statement: Status.tradeCounter();
         }
-        public static void alphaCenturia()//if(tradeMenu(pressed b) -> Buy/Sell Buttons
+        public static void AlphaCenturia()//if(tradeMenu(pressed b) -> Buy/Sell Buttons
         {
-<<<<<<< HEAD
             Status status = new Status();
             int fruit = Status.fruit;
             int meat = Status.meat;
@@ -31,7 +30,6 @@ namespace SpaceTradingGame
             int residents = Status.residents;
             int miningTools = Status.miningTools; 
 
-=======
             (int, int) coordinates = (183, 147);
 
             int highGradeFuel = 2000;
@@ -39,7 +37,6 @@ namespace SpaceTradingGame
             int residents = 1500;
             int rifle = 750;
             int shipMissles = 3000;
->>>>>>> a807a1774e220e143b61ba6ea30f03353876dd5a
 
             string[] terminalItems = new string[] { "High-Grade Fuel", "alphaCenturia Land", "alphaCenturia Residents", "Rifle", "Ship Missiles" };
             int[] items = new int[] { highGradeFuel, land, residents, rifle, shipMissles };
