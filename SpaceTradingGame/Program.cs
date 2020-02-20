@@ -10,8 +10,9 @@ namespace SpaceTradingGame
     {
         static void Main(string[] args)
         {
-            Planets planet = new Planets();
-            Planets.alphaCenturia(); 
+            tradingTerminal.Purchase();
+            //Planets planet = new Planets();
+            //Planets.alphaCenturia(); 
             
             //Menu.UserMenu();
             //Console.SetCursorPosition(12, 2);

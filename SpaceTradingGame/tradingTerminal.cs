@@ -6,11 +6,14 @@ namespace SpaceTradingGame
 {
     class tradingTerminal
     {
-        public static void TerminalMenu(Planets planet, Status status)
+        public static void TerminalMenu()
         {
+           Planets planet = new Planets();
+            Status status = new Status();
+            int currency = status.playerMoney;
            
                 Console.SetCursorPosition(0, 0);
-                Console.WriteLine($"Credits: {status.playerMoney}");
+                Console.WriteLine($"Credits: {currency}");
 
                 Console.SetCursorPosition(50, 0);
                 Console.WriteLine($"Welcome to the Trade Terminal {planet.name}");
@@ -19,7 +22,7 @@ namespace SpaceTradingGame
 
                 //status.moveCounter();
 
-                Console.WriteLine($"Moves remaining :{status.moves}");
+                Console.WriteLine($"Moves remaining :{status.totalTrades}");
 
             
 
@@ -29,10 +32,19 @@ namespace SpaceTradingGame
         {
             Status status = new Status();
             int currency = status.playerMoney;
-
-
+            (int, int) coordinates = status.coordinates;
             
-
+            
+           
+            switch (coordinates)
+            {
+                case (0, 0):
+                    Planets.alphaCenturia();
+                    break;
+                    
+            }
+            
+ 
            
         }
 
@@ -40,6 +52,9 @@ namespace SpaceTradingGame
         {
             Status status = new Status();
             int currency = status.playerMoney;
+            (int, int) coordinates = status.coordinates;
+
+
 
 
         }
@@ -55,11 +70,19 @@ namespace SpaceTradingGame
                 Status.ship();
             }else if (userInput == "N" || userInput == "n")
             {
-                // return to trade terminal menu
+                TerminalMenu();
             }
 
             
         }
-       
+        public static void A1Purchase()
+        {
+            Planets.alphaCenturia();
+
+
+
+            
+
+        }
     }
 }

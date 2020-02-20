@@ -8,8 +8,10 @@ namespace SpaceTradingGame
     public class Status
     {
         public int moves = 5;
+        public int totalTrades = 10;
         public int years = 18;
         public int playerMoney = 50000;
+        public (int, int) coordinates = (0, 0);
         
 
         public static int fruit = 5;
@@ -27,7 +29,7 @@ namespace SpaceTradingGame
             for (int i = 0; moves > 0; i++)
             {
                 Console.WriteLine($" {moves -= 1}");
-
+                
             }
             if (moves == 0)
             {
@@ -38,9 +40,9 @@ namespace SpaceTradingGame
                 }
             }
         }
-        public static void tradeCounter()
+        public void tradeCounter()
         {
-            int totalTrades = 10;
+            
 
             for (int i = 0; totalTrades > 0; i++)
             {
@@ -57,9 +59,17 @@ namespace SpaceTradingGame
                 Console.WriteLine(items[i]);
             }
         }
+
+        //public static int PlayerMoney()
+        //{
+        //    int currency = 50000;
+        //    return currency;
+        //}
         public static void ship()
         {
-            (int, int) coordinates = (0, 0);
+            Status status = new Status();
+            (int, int) shipCoordinates = status.coordinates;
+            
             Console.WriteLine("1: Check Inventory" + "\n3: Travel");
             string input = Console.ReadLine();
             if (input == "1")
@@ -69,7 +79,7 @@ namespace SpaceTradingGame
             }
             else if (input == "2")
             {
-                Status status = new Status();
+                //Status status = new Status();
                 int currency = status.playerMoney;
                 Console.WriteLine($"You have {currency}");
             }
