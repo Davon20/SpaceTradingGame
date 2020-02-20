@@ -9,8 +9,6 @@ namespace SpaceTradingGame
 {
     public class Status
     {
-        List<int> items = new List<int>() { fruit, meat, jewels, rifles, pistols, explosives, missiles, land, residents, miningTools };
-        List<string> item = new List<string>() { "fruit", "meat", "jewels", "rifles", "pistols", "explosives", "missiles", "land", "residents", "miningTools" };
 
         public int moves = 5;
         public int totalTrades = 10;
@@ -52,6 +50,8 @@ namespace SpaceTradingGame
         }
         public static void Inventory()
         {
+            List<int> items = new List<int>() { fruit, meat, jewels, rifles, pistols, explosives, missiles, land, residents, miningTools };
+            List<string> item = new List<string>() { "fruit", "meat", "jewels", "rifles", "pistols", "explosives", "missiles", "land", "residents", "miningTools" };
             
             
             

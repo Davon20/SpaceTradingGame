@@ -21,7 +21,7 @@ namespace SpaceTradingGame
 
             //int currency = status.playerMoney;
             int trades = status.totalTrades;
-            List<string> newPurchase = Status.Inventory.
+            
 
             int highGradeFuel = 2000;
             int land = 1000;
