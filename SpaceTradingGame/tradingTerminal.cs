@@ -34,6 +34,7 @@ namespace SpaceTradingGame
             int currency = status.playerMoney;
             (int, int) coordinates = status.coordinates;
             
+            Planets.alphaCenturia();
             
            
             switch (coordinates)

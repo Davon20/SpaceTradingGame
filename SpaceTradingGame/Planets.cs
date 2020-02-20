@@ -22,7 +22,7 @@ namespace SpaceTradingGame
             (int, int) coordinates = (183, 147);
 
             Status status = new Status();
-            int currency = status.playerMoney;
+            //int currency = status.playerMoney;
             int trades = status.totalTrades;
 
             int highGradeFuel = 2000;
@@ -35,44 +35,71 @@ namespace SpaceTradingGame
             string[] terminalItems = new string[] {"High-Grade Fuel","alphaCenturia Land","alphaCenturia Residents","Rifle","Ship Missiles" };
             int[] items = new int[] { highGradeFuel, land, residents, rifle, shipMissles };
             
-            Console.WriteLine("Please select which item you want to purchase");
-            for (int i = 0; i < items.Length; i++)
-            {
-                Console.Write($"{i+1}) {items[i]}: ");
-                Console.WriteLine( terminalItems[i]);
+          
 
-            }
+            do
+            {
+                Console.SetCursorPosition(0, 1);
+                Console.WriteLine("Please select which item you want to purchase");
+                for (int i = 0; i < items.Length; i++)
+                {
+                    Console.Write($"{i + 1}) {items[i]}: ");
+                    Console.WriteLine(terminalItems[i]);
+                }
+               
                 int userInput = Convert.ToInt32(Console.ReadLine());
 
-            for (int i = 0; i < 5; i++)
-            {
-
+                --trades;
                 if (userInput == 1)
                 {
-                    currency -= highGradeFuel;
-                    Console.WriteLine(currency);
+                    status.playerMoney -= highGradeFuel;
+                    Console.SetCursorPosition(0, 0);
+                    Console.WriteLine($"Credits: {status.playerMoney}");
+
+
+
+
                 }
                 else if (userInput == 2)
                 {
-                    currency -= land;
-                    Console.WriteLine(currency);
+                    status.playerMoney -= land;
+                    Console.SetCursorPosition(0, 0);
+                    Console.WriteLine($"Credits: {status.playerMoney}");
+
                 }
                 else if (userInput == 3)
                 {
-                    currency = currency - residents;
-                    Console.WriteLine(currency);
+                    status.playerMoney -= residents;
+                    Console.SetCursorPosition(0, 0);
+                    Console.WriteLine($"Credits: {status.playerMoney}");
+
                 }
                 else if (userInput == 4)
                 {
-                    currency = currency - rifle;
-                    Console.WriteLine(currency);
+                    status.playerMoney -= rifle;
+                    Console.SetCursorPosition(0, 0);
+                    Console.WriteLine($"Credits: {status.playerMoney}");
+
                 }
                 else if (userInput == 5)
                 {
-                    currency = currency - shipMissles;
-                    Console.WriteLine(currency);
+                    status.playerMoney-= shipMissles;
+                    Console.SetCursorPosition(0, 0);
+                    Console.WriteLine($"Credits: {status.playerMoney}");
+
                 }
-            }
+
+
+            } while (trades > 5);
+
+            Console.Clear();
+            Console.WriteLine("\nYou are out of trades at this terminal, you are now being returned to your ship\n");
+            Console.WriteLine("Ship");
+            Status.ship();
+            
+            
+            
+            
         }
        
         public static void Tatooine()//if(tradeMenu(pressed b) -> Buy/Sell Buttons
