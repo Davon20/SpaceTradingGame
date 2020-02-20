@@ -19,19 +19,6 @@ namespace SpaceTradingGame
         public static void alphaCenturia()//if(tradeMenu(pressed b) -> Buy/Sell Buttons
         {
 
-            Status status = new Status();
-            int fruit = Status.fruit;
-            int meat = Status.meat;
-            int jewels = Status.jewels;
-            int rifles = Status.rifles;
-            int pistols = Status.pistols;
-            int explosives = Status.explosives;
-            int missiles = Status.missiles;
-            int land = Status.land;
-            int residents = Status.residents;
-            int miningTools = Status.miningTools; 
-
-
             (int, int) coordinates = (183, 147);
 
             Status status = new Status();
@@ -57,51 +44,35 @@ namespace SpaceTradingGame
             }
                 int userInput = Convert.ToInt32(Console.ReadLine());
 
-            for (int i = 0; i < trades; i++)
+            for (int i = 0; i < 5; i++)
             {
 
                 if (userInput == 1)
                 {
                     currency -= highGradeFuel;
                     Console.WriteLine(currency);
-                    break;
-
                 }
                 else if (userInput == 2)
                 {
                     currency -= land;
                     Console.WriteLine(currency);
-                    break;
-
-
                 }
                 else if (userInput == 3)
                 {
                     currency = currency - residents;
                     Console.WriteLine(currency);
-                    break;
-
-
                 }
                 else if (userInput == 4)
                 {
                     currency = currency - rifle;
                     Console.WriteLine(currency);
-                    break;
-
                 }
                 else if (userInput == 5)
                 {
                     currency = currency - shipMissles;
                     Console.WriteLine(currency);
-                    break;
-
-
                 }
             }
-
-
-            
         }
        
         public static void Tatooine()//if(tradeMenu(pressed b) -> Buy/Sell Buttons
@@ -121,8 +92,6 @@ namespace SpaceTradingGame
                 Console.Write($"{items[i]}: ");
                 Console.WriteLine(terminalItems[i]);
             }
-
-            //If the user selects a product = Product Cost - playerMoney
 
             int userInput = int.Parse(Console.ReadLine()); 
             if (userInput == 1)
@@ -178,10 +147,6 @@ namespace SpaceTradingGame
             int missiles = 5000;
             int pistol = 750;
             
-
-
-
-
             string[] terminalItems = new string[] { "High-Grade Fuel", "September Land", "September Residents", "Missiles", "Pistol" };
             int[] items = new int[] { highGradeFuel, land, residents, missiles, pistol };
 

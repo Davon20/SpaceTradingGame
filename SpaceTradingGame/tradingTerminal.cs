@@ -34,11 +34,12 @@ namespace SpaceTradingGame
            
         }
 
-        public static void sell()
+        public static void Sell()
         {
             Status status = new Status();
             int currency = status.playerMoney;
 
+            Status.Inventory(); 
             
         }
 

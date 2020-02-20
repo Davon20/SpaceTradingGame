@@ -16,7 +16,7 @@ namespace SpaceTradingGame
 
         public static int fruit = 5;
         public static int meat = 10;
-        public static int jewels = 100;
+        public static int jewels = 1000;
         public static int rifles = 1500;
         public static int pistols = 750;
         public static int explosives = 2000;
@@ -84,34 +84,35 @@ namespace SpaceTradingGame
                 switch (travel)
                 {
                     case 1:
-                        //changes color of console; Console.BackgroundColor = ConsoleColor.DarkGray;
+                        Console.BackgroundColor = ConsoleColor.DarkGray;
                         Console.Clear();
-                        //changes color of text; Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("Welcome to Alpha Centuria");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Welcome to Alpha Centuria, a low income planet.");
+                        tradingTerminal.Sell(); 
                         Console.ReadLine();
                         break;
                     case 2:
                         Console.Clear();
                         Console.BackgroundColor = ConsoleColor.DarkMagenta;
-                        Console.WriteLine("Welcome to Tatooine");
+                        Console.WriteLine("Welcome to Tatooine, you've arrived to a desert planet.");
                         Console.ReadLine();
                         break;
                     case 3:
                         Console.Clear();
                         Console.BackgroundColor = ConsoleColor.DarkYellow;
-                        Console.WriteLine("Welcome to Alpha Centuria");
+                        Console.WriteLine("Welcome to Alderan, a planet full of life, actvity, and space pirates.");
                         Console.ReadLine();
                         break;
                     case 4:
                         Console.Clear();
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("Welcome to Alpha Centuria");
+                        Console.WriteLine("Welcome to Sentinel, a highly advanced civilization resides here.");
                         Console.ReadLine();
                         break;
                     case 5:
                         Console.Clear();
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("Welcome to Alpha Centuria");
+                        Console.WriteLine("Welcome to September, home of the Space Police Academy.");
                         Console.ReadLine();
                         break;
                 }
