@@ -6,9 +6,13 @@ namespace SpaceTradingGame
 {
     class tradingTerminal
     {
-        public static void TerminalMenu(Planets planet, Status status)
+        public static void TerminalMenu()
         {
-           
+            Planets planet = new Planets();
+            Status status = new Status();
+
+
+
                 Console.SetCursorPosition(0, 0);
                 Console.WriteLine($"Credits: {status.playerMoney}");
 
@@ -19,8 +23,13 @@ namespace SpaceTradingGame
 
                 //status.moveCounter();
 
-                Console.WriteLine($"Moves remaining :{status.moves}");
+                Console.WriteLine($"Moves remaining :{status.totalTrades}");
+            Purchase();
 
+                
+          
+
+            
             
 
         }
@@ -29,6 +38,7 @@ namespace SpaceTradingGame
         {
             Status status = new Status();
             int currency = status.playerMoney;
+            Planets.alphaCenturia();
             
 
            
