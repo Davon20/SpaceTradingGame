@@ -62,12 +62,6 @@ namespace SpaceTradingGame
             {
                 TerminalMenu();
             }
-
-            
-        }
-        public static void A1Purchase()
-        {
-            Planets.alphaCenturia();
         }
     }
 }

@@ -28,7 +28,6 @@ namespace SpaceTradingGame
             int residents = 1500;
             int rifle = 750;
             int shipMissles = 3000;
-            int resultOne = 0;
 
             string[] terminalItems = new string[] {"High-Grade Fuel","alphaCenturia Land","alphaCenturia Residents","Rifle","Ship Missiles" };
             int[] items = new int[] { highGradeFuel, land, residents, rifle, shipMissles };
@@ -64,7 +63,6 @@ namespace SpaceTradingGame
                     Console.SetCursorPosition(0, 0);
                     Console.WriteLine($"Credits: {status.playerMoney}");
 
-
                 }
                 else if (userInput == 4)
                 {
@@ -78,7 +76,7 @@ namespace SpaceTradingGame
                     Console.SetCursorPosition(0, 0);
                     Console.WriteLine($"Credits: {status.playerMoney}");
                 }
-            } while (trades > 5);
+            } while (trades > 5 && status.playerMoney > 0);
 
             Console.Clear();
             Console.WriteLine("\nYou are out of trades at this terminal, you are now being returned to your ship\n");
