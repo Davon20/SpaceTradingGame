@@ -12,7 +12,9 @@ namespace SpaceTradingGame
         {
             tradingTerminal.Purchase();
             //Planets planet = new Planets();
-            //Planets.alphaCenturia(); 
+            //Planets.alphaCenturia();
+            tradingTerminal.Purchase();
+            //Status.ship(); 
             
             //Menu.UserMenu();
             //Console.SetCursorPosition(12, 2);

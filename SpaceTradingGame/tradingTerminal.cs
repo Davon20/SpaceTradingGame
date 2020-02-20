@@ -26,6 +26,9 @@ namespace SpaceTradingGame
 
             
 
+            
+            
+
         }
 
         public static void Purchase()
@@ -54,8 +57,7 @@ namespace SpaceTradingGame
             int currency = status.playerMoney;
             (int, int) coordinates = status.coordinates;
 
-
-
+            Status.Inventory(); 
             
         }
 
