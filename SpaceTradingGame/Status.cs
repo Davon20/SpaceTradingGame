@@ -9,6 +9,7 @@ namespace SpaceTradingGame
 {
     public class Status
     {
+
         public int moves = 5;
         public int totalTrades = 10;
         public int years = 18;
@@ -48,17 +49,20 @@ namespace SpaceTradingGame
         }
         public static void Inventory()
         {
-            int[] items = new int[] { fruit, meat, jewels, rifles, pistols, explosives, missiles, land, residents, miningTools } ;
-            string[] item = new string[] {"fruit", "meat", "jewels", "rifles", "pistols", "explosives", "missiles", "land", "residents", "miningTools"};
-            for (int i = 0; i < items.Length; i++)
+            List<int> items = new List<int>() { fruit, meat, jewels, rifles, pistols, explosives, missiles, land, residents, miningTools };
+            List<string> item = new List<string>() { "fruit", "meat", "jewels", "rifles", "pistols", "explosives", "missiles", "land", "residents", "miningTools" };
+            
+            
+            
+            
+            for (int i = 0; i < items.Count; i++)
             {
                 Console.Write($"{item[i]}: "); 
                 Console.WriteLine(items[i]);
             }
         }
-        public static void ship()
+        public static void ship(Status status)
         {
-            Status status = new Status();
             (int, int) shipCoordinates = status.coordinates;
             
             Console.WriteLine("1: Check Inventory" + "\n2: Travel");
