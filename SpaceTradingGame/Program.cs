@@ -10,8 +10,8 @@ namespace SpaceTradingGame
     {
         static void Main(string[] args)
         {
-            tradingTerminal.Purchase();
-
+            Status status = new Status();
+            tradingTerminal.Purchase(status);
         }
     }
 }
