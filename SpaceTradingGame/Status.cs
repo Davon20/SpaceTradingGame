@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Drawing;
+using System.Windows;
 
 namespace SpaceTradingGame
 {
@@ -73,7 +75,45 @@ namespace SpaceTradingGame
             }
             else if (input == "3")
             {
-                Console.WriteLine("Input the planets the user will travel to.");
+                Console.Clear();
+                Console.Write("Travel To: ");
+                Console.WriteLine("\n(1) Alpha Centuria" + "\n(2) Tatooine" + "\n(3) Alderan" + "\n(4) Sentinel" + "\n(5) September");
+                int travel = int.Parse(Console.ReadLine());
+
+                switch (travel)
+                {
+                    case 1:
+                        //changes color of console; Console.BackgroundColor = ConsoleColor.DarkGray;
+                        Console.Clear();
+                        //changes color of text; Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Welcome to Alpha Centuria");
+                        Console.ReadLine();
+                        break;
+                    case 2:
+                        Console.Clear();
+                        Console.BackgroundColor = ConsoleColor.DarkMagenta;
+                        Console.WriteLine("Welcome to Tatooine");
+                        Console.ReadLine();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        Console.BackgroundColor = ConsoleColor.DarkYellow;
+                        Console.WriteLine("Welcome to Alpha Centuria");
+                        Console.ReadLine();
+                        break;
+                    case 4:
+                        Console.Clear();
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Welcome to Alpha Centuria");
+                        Console.ReadLine();
+                        break;
+                    case 5:
+                        Console.Clear();
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine("Welcome to Alpha Centuria");
+                        Console.ReadLine();
+                        break;
+                }
             }
             else
             {
