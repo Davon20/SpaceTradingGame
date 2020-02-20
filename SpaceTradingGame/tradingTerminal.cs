@@ -6,10 +6,9 @@ namespace SpaceTradingGame
 {
     class tradingTerminal
     {
-        public static void TerminalMenu()
+        public static void TerminalMenu(Status status)
         {
            Planets planet = new Planets();
-            Status status = new Status();
             int currency = status.playerMoney;
            
                 Console.SetCursorPosition(0, 0);
@@ -26,31 +25,29 @@ namespace SpaceTradingGame
 
         }
 
-        public static void Purchase()
+        public static void Purchase(Status status)
         {
-            Status status = new Status();
-            int currency = status.playerMoney;
             (int, int) coordinates = status.coordinates;
-            
-            Planets.alphaCenturia();
+           
+           
+           
             
             switch (coordinates)
             {
                 case (0, 0):
-                    Planets.alphaCenturia();
+                    Planets.alphaCenturia(status);
                     break;
             }
         }
 
-        public static void sell()
+        public static void sell(Status status)
         {
-            Status status = new Status();
+            
             int currency = status.playerMoney;
-            (int, int) coordinates = status.coordinates;
-            Status.Inventory();             
+                    
         }
 
-        public static void Exit ()
+        public static void Exit (Status status)
         {
             Console.WriteLine("Are you sure you want to exit the trade terminal and return to your ship? [Y / N]");
             var userInput = Console.ReadLine();
@@ -58,17 +55,14 @@ namespace SpaceTradingGame
             if (userInput == "Y" || userInput == "y")
             {
                 Console.WriteLine( "Returning to ship");
-                Status.ship();
+                Status.ship(status);
             }else if (userInput == "N" || userInput == "n")
             {
-                TerminalMenu();
+                TerminalMenu(status);
             }
 
             
         }
-        public static void A1Purchase()
-        {
-            Planets.alphaCenturia();
-        }
+      
     }
 }
