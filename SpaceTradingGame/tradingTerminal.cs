@@ -41,7 +41,7 @@ namespace SpaceTradingGame
             }
         }
 
-        public static void Sell()
+        public static void sell()
         {
             Status status = new Status();
             int currency = status.playerMoney;
