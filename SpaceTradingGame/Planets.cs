@@ -28,7 +28,6 @@ namespace SpaceTradingGame
             int residents = 1500;
             int rifle = 750;
             int shipMissles = 3000;
-            int resultOne = 0;
 
             string[] terminalItems = new string[] {"High-Grade Fuel","alphaCenturia Land","alphaCenturia Residents","Rifle","Ship Missiles" };
             int[] items = new int[] { highGradeFuel, land, residents, rifle, shipMissles };

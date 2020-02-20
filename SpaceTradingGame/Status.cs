@@ -37,7 +37,6 @@ namespace SpaceTradingGame
                 for (int j = 0; years < 65; j++)
                 {
                     Console.WriteLine($"You are out of moves and are now {years += 1} years old.");
-
                 }
             }
         }
@@ -66,7 +65,7 @@ namespace SpaceTradingGame
         {
             (int, int) shipCoordinates = status.coordinates;
             
-            Console.WriteLine("1: Check Inventory" + "\n3: Travel");
+            Console.WriteLine("1: Check Inventory" + "\n2: Travel");
             string input = Console.ReadLine();
             if (input == "1")
             {
@@ -74,12 +73,6 @@ namespace SpaceTradingGame
                 Inventory();
             }
             else if (input == "2")
-            {
-                //Status status = new Status();
-                int currency = status.playerMoney;
-                Console.WriteLine($"You have {currency}");
-            }
-            else if (input == "3")
             {
                 Console.Clear();
                 Console.Write("Travel To: ");
@@ -92,9 +85,8 @@ namespace SpaceTradingGame
                         Console.BackgroundColor = ConsoleColor.DarkGray;
                         Console.Clear();
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine("Welcome to Alpha Centuria, a low income planet.");
-                        //tradingTerminal.Sell(); 
-                        Console.ReadLine();
+                        Console.WriteLine("\nWelcome to Alpha Centuria, a low income planet. Feel free to trade at your leisure.");
+                        Planets.alphaCenturia();
                         break;
                     case 2:
                         Console.Clear();
@@ -124,8 +116,9 @@ namespace SpaceTradingGame
             }
             else
             {
-                Console.WriteLine("Please enter only 1, 2, or 3.");
-               
+                Console.WriteLine("Please enter only 1 or 2.");
+                Console.Clear();
+                ship(); 
             }
         }
     }
