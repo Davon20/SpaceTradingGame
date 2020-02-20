@@ -72,7 +72,7 @@ namespace SpaceTradingGame
 
             (int, int) coordinates = (164, 300);
 
-            string[] terminalItems = new string[] { "Low-Grade Fuel", "Alderan Land", "Alderan Residents", "", "", };
+            string[] terminalItems = new string[] { "Low-Grade Fuel", "Alderan Land", "Alderan Residents", "art", "cigars", };
             int[] items = new int[] { lowGradeFuel, land, residents, art, cigars };
 
             for (int i = 0; i < items.Length; i++)
@@ -109,13 +109,13 @@ namespace SpaceTradingGame
             int residents = 3000;
             int missiles = 5000;
             int pistol = 750;
-            int rifles = 1500;
+            
 
 
 
 
-            string[] terminalItems = new string[] { "High-Grade Fuel", "September Land", "September Residents", "Missiles", "Pistol", "Rifles" };
-            int[] items = new int[] { highGradeFuel, land, residents, missiles, pistol, rifles };
+            string[] terminalItems = new string[] { "High-Grade Fuel", "September Land", "September Residents", "Missiles", "Pistol" };
+            int[] items = new int[] { highGradeFuel, land, residents, missiles, pistol };
 
             for (int i = 0; i < items.Length; i++)
             {
