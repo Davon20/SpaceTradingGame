@@ -62,7 +62,6 @@ namespace SpaceTradingGame
                     status.playerMoney -= residents;
                     Console.SetCursorPosition(0, 0);
                     Console.WriteLine($"Credits: {status.playerMoney}");
-
                 }
                 else if (userInput == 4)
                 {
