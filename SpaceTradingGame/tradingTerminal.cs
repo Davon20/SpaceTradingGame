@@ -32,18 +32,14 @@ namespace SpaceTradingGame
             int currency = status.playerMoney;
             (int, int) coordinates = status.coordinates;
             
+            Planets.alphaCenturia();
             
-           
             switch (coordinates)
             {
                 case (0, 0):
                     Planets.alphaCenturia();
                     break;
-                    
             }
-            
- 
-           
         }
 
         public static void sell()
@@ -51,9 +47,7 @@ namespace SpaceTradingGame
             Status status = new Status();
             int currency = status.playerMoney;
             (int, int) coordinates = status.coordinates;
-
-            Status.Inventory(); 
-            
+            Status.Inventory();             
         }
 
         public static void Exit ()
@@ -75,11 +69,6 @@ namespace SpaceTradingGame
         public static void A1Purchase()
         {
             Planets.alphaCenturia();
-
-
-
-            
-
         }
     }
 }
