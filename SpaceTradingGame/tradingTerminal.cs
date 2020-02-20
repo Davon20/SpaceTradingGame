@@ -24,11 +24,6 @@ namespace SpaceTradingGame
 
                 Console.WriteLine($"Moves remaining :{status.totalTrades}");
 
-            
-
-            
-            
-
         }
 
         public static void Purchase()
