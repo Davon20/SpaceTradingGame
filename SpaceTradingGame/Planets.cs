@@ -63,7 +63,7 @@ namespace SpaceTradingGame
                     status.playerMoney -= residents;
                     Console.SetCursorPosition(0, 0);
                     Console.WriteLine($"Credits: {status.playerMoney}");
->>>>>>>>> Temporary merge branch 2
+
 
                 }
                 else if (userInput == 4)
