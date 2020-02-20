@@ -7,7 +7,6 @@ namespace SpaceTradingGame
 {
     class Menu
     {
-
         public static  void UserMenu ()
         {
             Console.WriteLine("[1] New Game");
@@ -32,14 +31,10 @@ namespace SpaceTradingGame
 
                 }
             } while (true);
-        }
-
-        
-        
+        }       
 
         public static void New()
         {
-
             using (StreamWriter sw = new StreamWriter(@"C:\Users\turck\Documents\MSSA Cohort 8\cs projects\11FEB_SpaceTradingGame\SpaceTradingGame\SpaceTradingGame\SaveFile.Txt"))
             {
                 sw.WriteLine();
@@ -48,7 +43,6 @@ namespace SpaceTradingGame
 
         public static void Load()
         {
-   
             using (StreamReader sr = new StreamReader(@"C:\Users\turck\Documents\MSSA Cohort 8\cs projects\11FEB_SpaceTradingGame\SpaceTradingGame\SpaceTradingGame\SaveFile.Txt"))
             {
                 sr.ReadLine();
@@ -57,25 +51,23 @@ namespace SpaceTradingGame
 
         public static void Exit()
         {
-                      
-                Console.WriteLine("Are you sure you want to exit? [Y/N]");
-                var exit = Console.ReadLine();
+            Console.WriteLine("Are you sure you want to exit? [Y/N]");
+            var exit = Console.ReadLine();
 
-                switch (exit)
-                {
-                    case "Y":
-                    case "y":
-                        Environment.Exit(0);
-                        break;
+            switch (exit)
+            {
+                case "Y":
+                case "y":
+                    Environment.Exit(0);
+                    break;
 
-                    case "N":
-                    case "n":
-                        Console.Clear();
-                        UserMenu();
-                        break;
+                case "N":
+                case "n":
+                    Console.Clear();
+                    UserMenu();
+                    break;
 
-                }
-            
+            }
         }
     }
 }

@@ -15,7 +15,6 @@ namespace SpaceTradingGame
         public int playerMoney = 50000;
         public (int, int) coordinates = (0, 0);
         
-
         public static int fruit = 5;
         public static int meat = 10;
         public static int jewels = 1000;
@@ -31,7 +30,6 @@ namespace SpaceTradingGame
             for (int i = 0; moves > 0; i++)
             {
                 Console.WriteLine($" {moves -= 1}");
-                
             }
             if (moves == 0)
             {
@@ -44,8 +42,6 @@ namespace SpaceTradingGame
         }
         public  void tradeCounter()
         {
-            
-
             for (int i = 0; totalTrades > 0; i++)
             {
                 Console.WriteLine($"You have { totalTrades -= 1 } trades remaining.");
@@ -61,12 +57,6 @@ namespace SpaceTradingGame
                 Console.WriteLine(items[i]);
             }
         }
-
-        //public static int PlayerMoney()
-        //{
-        //    int currency = 50000;
-        //    return currency;
-        //}
         public static void ship()
         {
             Status status = new Status();
@@ -133,7 +123,6 @@ namespace SpaceTradingGame
                 Console.WriteLine("Please enter only 1, 2, or 3.");
                 ship(); 
             }
-            //int coordinates;
         }
     }
 }
