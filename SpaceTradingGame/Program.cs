@@ -12,9 +12,8 @@ namespace SpaceTradingGame
     {
         static void Main(string[] args)
         {
-            Menu men = new Menu();
-            Menu.UserMenu();
+            Status status = new Status();
+            tradingTerminal.Purchase(status);
         }
-
     }
 }
