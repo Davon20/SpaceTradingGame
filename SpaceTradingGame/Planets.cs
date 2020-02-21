@@ -29,24 +29,24 @@ namespace SpaceTradingGame
             //int rifle = 750;
             //int shipMissles = 3000;
 
-            //string[] terminalItems = new string[] {"High-Grade Fuel","alphaCenturia Land","alphaCenturia Residents","Rifle","Ship Missiles" };
+            //string[] terminalItems = new string[] { "High-Grade Fuel", "alphaCenturia Land", "alphaCenturia Residents", "Rifle", "Ship Missiles" };
             //int[] items = new int[] { highGradeFuel, land, residents, rifle, shipMissles };
-            
+
             //do
             //{
             //    Console.SetCursorPosition(0, 0);
             //    Console.WriteLine($"Credits: {status.playerMoney}");
             //    Console.SetCursorPosition(100, 0);
-            //    Console.WriteLine($"Moves Remaining : {trades -5}");
+            //    Console.WriteLine($"Moves Remaining : {trades - 5}");
 
             //    Console.SetCursorPosition(0, 2);
             //    Console.WriteLine("Please select which item you want to purchase");
             //    for (int i = 0; i < items.Length; i++)
             //    {
-                    
+
             //        Console.Write($"{i + 1}) {items[i]}: ");
             //        Console.WriteLine(terminalItems[i]);
-                    
+
             //    }
             //    Console.WriteLine("6) Return to Trade Terminal Main Menu");
             //    int userInput = Convert.ToInt32(Console.ReadLine());
@@ -61,7 +61,7 @@ namespace SpaceTradingGame
             //        Console.SetCursorPosition(0, 0);
             //        Console.WriteLine($"Credits: {status.playerMoney}");
             //        Console.SetCursorPosition(100, 0);
-            //        Console.WriteLine($"Moves Remaining : {trades-5}" );
+            //        Console.WriteLine($"Moves Remaining : {trades - 5}");
             //    }
             //    else if (userInput == 2)
             //    {
@@ -98,7 +98,7 @@ namespace SpaceTradingGame
             //    }
             //    else if (userInput == 5)
             //    {
-            //        status.playerMoney-= shipMissles;
+            //        status.playerMoney -= shipMissles;
             //        playerInventory.Add(terminalItems[4]);
             //        Console.Clear();
             //        Console.WriteLine("\n ***Ship Missles have been added to your inventory!***");
@@ -112,7 +112,7 @@ namespace SpaceTradingGame
             //        //place holder for option to return to terminal main menu
             //    }
             //} while (trades > 5);
-            
+
 
             //Console.Clear();
             //Console.WriteLine("\nYou are out of trades at this terminal, you are now being returned to your ship\n");
