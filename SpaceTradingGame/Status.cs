@@ -97,7 +97,8 @@ namespace SpaceTradingGame
                         Console.Clear();
                         Console.SetCursorPosition(0, 1);
                         Console.WriteLine("\nWelcome to Alpha Centuria, a low income planet. Feel free to trade at your leisure.");
-                        tradingTerminal.Purchase(status);
+                        
+                        tradingTerminal.TerminalMenu(status);
                         break;
                     case 2:
                         status.coordinates = (250, 140);
@@ -106,9 +107,9 @@ namespace SpaceTradingGame
                         Console.Clear();
                         Console.SetCursorPosition(0, 2);
                         Console.WriteLine("Welcome to Tatooine, you've arrived to a desert planet.");
-                        tradingTerminal.Purchase(status);
-                       // tradingTerminal.Sell(status);
-                       // Console.ReadLine();
+                        tradingTerminal.TerminalMenu(status);
+                        // tradingTerminal.Sell(status);
+                        // Console.ReadLine();
                         break;
                     case 3:
                         status.coordinates = (164, 300);
@@ -117,7 +118,7 @@ namespace SpaceTradingGame
                         Console.Clear();
                         Console.SetCursorPosition(0, 2);
                         Console.WriteLine("Welcome to Alderan, a planet full of life, actvity, and space pirates.");
-                        tradingTerminal.Purchase(status);
+                        tradingTerminal.TerminalMenu(status);
                         // Console.ReadLine();
                         break;
                     case 4: status.coordinates = (354, 256);
@@ -126,7 +127,7 @@ namespace SpaceTradingGame
                         Console.Clear();
                         Console.SetCursorPosition(0, 2);
                         Console.WriteLine("Welcome to Sentinel, a highly advanced civilization resides here.");
-                        tradingTerminal.Purchase(status);
+                        tradingTerminal.TerminalMenu(status);
                         //Console.ReadLine();
                         break;
                     case 5: status.coordinates = (496, 532);
@@ -135,7 +136,7 @@ namespace SpaceTradingGame
                         Console.Clear();
                         Console.SetCursorPosition(0, 2);
                         Console.WriteLine("Welcome to September, home of the Space Police Academy.");
-                        tradingTerminal.Purchase(status);
+                        tradingTerminal.TerminalMenu(status);
                         // Console.ReadLine();
                         break;
                 }

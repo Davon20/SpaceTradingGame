@@ -652,14 +652,14 @@ namespace SpaceTradingGame
 
                     Console.SetCursorPosition(0, 2);
                     Console.WriteLine("Please select which item you want to sell");
+                    Console.WriteLine("6) Return to Trade Terminal Main Menu");
                     for (int i = 0; i < playerInventory.Count; i++)
                     {
 
-                        Console.Write($"{i + 1}) {playerInventory[i]}: ");
+                        Console.Write($"{i + 2}) {playerInventory[i]}: ");
                         Console.WriteLine(gameItems[i]*2);
 
                     }
-                    Console.WriteLine("6) Return to Trade Terminal Main Menu");
                     int userInput = Convert.ToInt32(Console.ReadLine());
 
                     --status.totalTrades;

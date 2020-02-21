@@ -28,46 +28,60 @@ namespace SpaceTradingGame
                 Thread.Sleep(150);
             }
 
+            SubMenu();
+        }
+
+        private static void SubMenu()
+        {
             Console.SetCursorPosition(0, 0);
             Console.WriteLine("[1] New Game");
             Console.WriteLine("[2] Continue Saved Game");
             Console.WriteLine("[3] Exit");
             do
             {
-                int uI = Convert.ToInt32(Console.ReadLine());
-                switch (uI)
+
+                string uI = Console.ReadLine();
+                if (uI == "1" || uI == "2" || uI == "3")
                 {
-                    case 1:
-                        New();
-                        Console.Clear();
-                        
-                        Status status = new Status();
-                        Status.ship(status);
-                        break;
-
-                    case 2:
-                        Load();
-                        break;
-
-                    case 3:
-                        Exit();
-                        break;
+                    switch (uI)
+                    {
+                        case "1":
+                            New();
+                            Console.Clear();
+                            Status status = new Status();
+                            Status.ship(status);
+                            break;
+                        case "2":
+                            Load();
+                            break;
+                        case "3":
+                            Exit();
+                            break;
+                    }
 
                 }
+                else
+                {
+                    Console.Clear();
+                    Console.WriteLine("Please enter either 1, 2, or 3");
+                }
+                Console.Clear();
+                SubMenu();
             } while (true);
         }
 
         public static void New()
         {
-            using (StreamWriter sw = new StreamWriter(@"C:\Users\davon\source\repos\SpaceTradingGame\SpaceTradingGame\SaveFile.Txt"))
+            using (StreamWriter sw = new StreamWriter(@"C:\Users\turck\Documents\MSSA Cohort 8\cs projects\11FEB_SpaceTradingGame\SpaceTradingGame\SpaceTradingGame\SaveFile.Txt"))
             {
                 sw.WriteLine();
+               
             }
         }
 
         public static void Load()
         {
-            using (StreamReader sr = new StreamReader(@"C:\Users\davon\source\repos\SpaceTradingGame\SpaceTradingGame\SaveFile.Txt"))
+            using (StreamReader sr = new StreamReader(@"C:\Users\turck\Documents\MSSA Cohort 8\cs projects\11FEB_SpaceTradingGame\SpaceTradingGame\SpaceTradingGame\SaveFile.Txt"))
             {
                 sr.ReadLine();
             }           
