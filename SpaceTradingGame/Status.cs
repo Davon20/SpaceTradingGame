@@ -95,7 +95,7 @@ namespace SpaceTradingGame
                         Console.BackgroundColor = ConsoleColor.DarkGray;
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.Clear();
-                        Console.SetCursorPosition(0, 2);
+                        Console.SetCursorPosition(0, 1);
                         Console.WriteLine("\nWelcome to Alpha Centuria, a low income planet. Feel free to trade at your leisure.");
                         tradingTerminal.Purchase(status);
                         break;
