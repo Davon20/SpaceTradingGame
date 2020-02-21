@@ -12,7 +12,7 @@ namespace SpaceTradingGame
         public static void Earth() //if(tradeMenu(pressed b) -> Buy/Sell Buttons
         {
             (int, int) coordinates = (0, 0);
-            Console.WriteLine("Hello");
+           //Console.WriteLine("Hello");
             // REquires if statement: Status.tradeCounter();
         }
         public static void alphaCenturia(Status status)//if(tradeMenu(pressed b) -> Buy/Sell Buttons
@@ -124,87 +124,89 @@ namespace SpaceTradingGame
         {
             (int, int) coordinates = (250, 140);
 
-            int lowGradeFuel = 1000;
-            int land = 500;
-            int residents = 700;
-            int pistol = 250;
-            int rareMetals = 3500;
+            //int lowGradeFuel = 1000;
+            //int land = 500;
+            //int residents = 700;
+            //int pistol = 250;
+            //int rareMetals = 3500;
 
-            string[] terminalItems = new string[] { "Low-Grade Fuel", "Tatooine Land", "Tatooine Residents", "Pistol", "Rare Metals" };
-            int[] items = new int[] { lowGradeFuel, land, residents, pistol, rareMetals };
-            for (int i = 0; i < items.Length; i++)
-            {
-                Console.Write($"{items[i]}: ");
-                Console.WriteLine(terminalItems[i]);
-            }
+            //string[] terminalItems = new string[] { "Low-Grade Fuel", "Tatooine Land", "Tatooine Residents", "Pistol", "Rare Metals" };
+            //int[] items = new int[] { lowGradeFuel, land, residents, pistol, rareMetals };
+            //for (int i = 0; i < items.Length; i++)
+            //{
+            //    Console.Write($"{items[i]}: ");
+            //    Console.WriteLine(terminalItems[i]);
+            //}
 
-            int userInput = int.Parse(Console.ReadLine()); 
-            if (userInput == 1)
-            {
+            //int userInput = int.Parse(Console.ReadLine()); 
+            //if (userInput == 1)
+            //{
                 
-            }
+            //}
         }
         public static void Alderan()//if(tradeMenu(pressed b) -> Buy/Sell Buttons
         {
-            
-            int lowGradeFuel = 500;
-            int land = 3000;
-            int residents = 2000;
-            int art = 4000;
-            int cigars = 2000; 
-
             (int, int) coordinates = (164, 300);
+            
+            //int lowGradeFuel = 500;
+            //int land = 3000;
+            //int residents = 2000;
+            //int art = 4000;
+            //int cigars = 2000; 
 
-            string[] terminalItems = new string[] { "Low-Grade Fuel", "Alderan Land", "Alderan Residents", "art", "cigars", };
-            int[] items = new int[] { lowGradeFuel, land, residents, art, cigars };
+
+            //string[] terminalItems = new string[] { "Low-Grade Fuel", "Alderan Land", "Alderan Residents", "art", "cigars", };
+            //int[] items = new int[] { lowGradeFuel, land, residents, art, cigars };
 
            
 
 
-            for (int i = 0; i < items.Length; i++)
-            {
+            //for (int i = 0; i < items.Length; i++)
+            //{
 
-                Console.Write($"{items[i]}: ");
-                Console.WriteLine(terminalItems[i]);
-            }
+            //    Console.Write($"{items[i]}: ");
+            //    Console.WriteLine(terminalItems[i]);
+            //}
         }
         public static void Sentinel()//if(tradeMenu(pressed b) -> Buy/Sell Buttons
         {
-            int highGradeFuel = 1000;
-            int vitaminWater = 500;
-            int upgradedNavigationSystem = 3000;
-            int virtualGameStation = 4000;
-            int halfThePlanet = 75000; 
-            
-            string[] terminalItems = new string[] { "High-Grade Fuel", "Vitamin Water", "Upgraded Navigation System", "Virtual Game Station", "50% of Planet Land", };
-            int[] items = new int[] { highGradeFuel, vitaminWater, upgradedNavigationSystem, virtualGameStation, halfThePlanet };
-
-            for (int i = 0; i < items.Length; i++)
-            {
-                Console.Write($"{items[i]}: ");
-                Console.WriteLine(terminalItems[i]);
-            }
-
             (int, int) coordinates = (354, 256);
+
+
+            //int highGradeFuel = 1000;
+            //int vitaminWater = 500;
+            //int upgradedNavigationSystem = 3000;
+            //int virtualGameStation = 4000;
+            //int halfThePlanet = 75000; 
+            
+            //string[] terminalItems = new string[] { "High-Grade Fuel", "Vitamin Water", "Upgraded Navigation System", "Virtual Game Station", "50% of Planet Land", };
+            //int[] items = new int[] { highGradeFuel, vitaminWater, upgradedNavigationSystem, virtualGameStation, halfThePlanet };
+
+            //for (int i = 0; i < items.Length; i++)
+            //{
+            //    Console.Write($"{items[i]}: ");
+            //    Console.WriteLine(terminalItems[i]);
+            //}
+
         }
         public static void September()//if(tradeMenu(pressed b) -> Buy/Sell Buttons
         {
             (int, int) coordinates = (496, 532);
 
-            int highGradeFuel = 2500;
-            int land = 4000;
-            int residents = 3000;
-            int missiles = 5000;
-            int pistol = 750;
+            //int highGradeFuel = 2500;
+            //int land = 4000;
+            //int residents = 3000;
+            //int missiles = 5000;
+            //int pistol = 750;
             
-            string[] terminalItems = new string[] { "High-Grade Fuel", "September Land", "September Residents", "Missiles", "Pistol" };
-            int[] items = new int[] { highGradeFuel, land, residents, missiles, pistol };
+            //string[] terminalItems = new string[] { "High-Grade Fuel", "September Land", "September Residents", "Missiles", "Pistol" };
+            //int[] items = new int[] { highGradeFuel, land, residents, missiles, pistol };
 
-            for (int i = 0; i < items.Length; i++)
-            {
-                Console.Write($"{items[i]}: ");
-                Console.WriteLine(terminalItems[i]);
-            }
+            //for (int i = 0; i < items.Length; i++)
+            //{
+            //    Console.Write($"{items[i]}: ");
+            //    Console.WriteLine(terminalItems[i]);
+            //}
         }
     }
 }

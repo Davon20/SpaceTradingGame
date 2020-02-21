@@ -69,7 +69,7 @@ namespace SpaceTradingGame
                     --trades;
                     if (userInput == 1)
                     {
-                        status.playerMoney -= highGradeFuel;
+                        status.playerMoney -= items[0];
                         playerInventory.Add(terminalItems[0]);
                         Console.Clear();
                         Console.WriteLine("\n***High-Grade Fuel has been added to your inventory!***");
@@ -82,7 +82,7 @@ namespace SpaceTradingGame
                     }
                     else if (userInput == 2)
                     {
-                        status.playerMoney -= land;
+                        status.playerMoney -= items[1];
                         playerInventory.Add(terminalItems[1]);
                         Console.Clear();
                         Console.WriteLine("\n***Alpha centuria land has been added to your inventory!***");
@@ -95,7 +95,7 @@ namespace SpaceTradingGame
                     }
                     else if (userInput == 3)
                     {
-                        status.playerMoney -= residents;
+                        status.playerMoney -= items[2];
                         playerInventory.Add(terminalItems[2]);
                         Console.Clear();
                         Console.WriteLine("\n***An alpha centurian resident has been added to your inventory!***");
@@ -108,7 +108,7 @@ namespace SpaceTradingGame
                     }
                     else if (userInput == 4)
                     {
-                        status.playerMoney -= rifle;
+                        status.playerMoney -= items[3];
                         playerInventory.Add(terminalItems[3]);
                         Console.Clear();
                         Console.WriteLine("\n***A rifle has been added to your inventory!***");
@@ -121,7 +121,7 @@ namespace SpaceTradingGame
                     }
                     else if (userInput == 5)
                     {
-                        status.playerMoney -= shipMissles;
+                        status.playerMoney -= items[4];
                         playerInventory.Add(terminalItems[4]);
                         Console.Clear();
                         Console.WriteLine("\n ***Ship Missles have been added to your inventory!***");
@@ -132,7 +132,7 @@ namespace SpaceTradingGame
                         Console.SetCursorPosition(100, 0);
                         Console.WriteLine($"Moves Remaining : {trades - 5}");
                     }
-                    else if (userInput == 5)
+                    else if (userInput == 6)
                     {
                         //place holder for option to return to terminal main menu
                     }
@@ -183,60 +183,297 @@ namespace SpaceTradingGame
                     --trades;
                     if (userInput == 1)
                     {
-                        status.playerMoney -= lowGradeFuel;
+                        status.playerMoney -= items[0];
                         playerInventory.Add(terminalItems[0]);
                         Console.Clear();
-                        Console.WriteLine("\n***High-Grade Fuel has been added to your inventory!***");
+                        Console.WriteLine($"\n***{terminalItems[0]} have been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
                         Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in Tattooine");
                         Console.SetCursorPosition(100, 0);
                         Console.WriteLine($"Moves Remaining : {trades - 5}");
                     }
                     else if (userInput == 2)
                     {
-                        status.playerMoney -= land;
+                        status.playerMoney -= items[1];
                         playerInventory.Add(terminalItems[1]);
                         Console.Clear();
-                        Console.WriteLine("\n***Alpha centuria land has been added to your inventory!***");
+                        Console.WriteLine($"\n***{terminalItems[1]} have been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
                         Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in Tattooine");
                         Console.SetCursorPosition(100, 0);
                         Console.WriteLine($"Moves Remaining : {trades - 5}");
                     }
                     else if (userInput == 3)
                     {
-                        status.playerMoney -= residents;
+                        status.playerMoney -= items [2];
                         playerInventory.Add(terminalItems[2]);
                         Console.Clear();
-                        Console.WriteLine("\n***An alpha centurian resident has been added to your inventory!***");
+                        Console.WriteLine($"\n***{terminalItems[2]} have been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
                         Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in Tattooine");
                         Console.SetCursorPosition(100, 0);
                         Console.WriteLine($"Moves Remaining : {trades - 5}");
                     }
                     else if (userInput == 4)
                     {
-                        status.playerMoney -= pistol;
+                        status.playerMoney -= items[3];
                         playerInventory.Add(terminalItems[3]);
                         Console.Clear();
-                        Console.WriteLine("\n***A rifle has been added to your inventory!***");
+                        Console.WriteLine($"\n***{terminalItems[3]} have been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
                         Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in Tattooine");
                         Console.SetCursorPosition(100, 0);
                         Console.WriteLine($"Moves Remaining : {trades - 5}");
                     }
                     else if (userInput == 5)
                     {
-                        status.playerMoney -= rareMetals;
+                        status.playerMoney -= items[4];
                         playerInventory.Add(terminalItems[4]);
                         Console.Clear();
-                        Console.WriteLine("\n ***Ship Missles have been added to your inventory!***");
+                        Console.WriteLine($"\n***{terminalItems[4]} have been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
                         Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in Tattooine");
+                        Console.SetCursorPosition(100, 0);
+                        Console.WriteLine($"Moves Remaining : {trades - 5}");
+                    }
+                    else if (userInput == 6)
+                    {
+                        //place holder for option to return to terminal main menu
+                    }
+                } while (trades > 5);
+
+
+                Console.Clear();
+                Console.WriteLine("\nYou are out of trades at this terminal, you are now being returned to your ship\n");
+                Console.WriteLine("Ship");
+                Status.ship(status);
+            }else if (coordinates == (164,300))//Alderan
+            {
+                int currency = status.playerMoney;
+                int trades = status.totalTrades;
+                List<string> playerInventory = status.playerInventory;
+
+                int lowGradeFuel = 500;
+                int land = 3000;
+                int residents = 2000;
+                int art = 4000;
+                int cigars = 2000;
+
+
+                string[] terminalItems = new string[] { "Low-Grade Fuel", "Alderan Land", "Alderan Residents", "art", "cigars", };
+                int[] items = new int[] { lowGradeFuel, land, residents, art, cigars };
+
+                do
+                {
+                    Console.SetCursorPosition(0, 0);
+                    Console.WriteLine($"Credits: {status.playerMoney}");
+                    Console.SetCursorPosition(35, 0);
+                    Console.WriteLine($"Welcome to the Trade Terminal in Alderan");
+                    Console.SetCursorPosition(100, 0);
+                    Console.WriteLine($"Moves Remaining : {trades - 5}");
+
+                    Console.SetCursorPosition(0, 2);
+                    Console.WriteLine("Please select which item you want to purchase");
+                    for (int i = 0; i < items.Length; i++)
+                    {
+
+                        Console.Write($"{i + 1}) {items[i]}: ");
+                        Console.WriteLine(terminalItems[i]);
+
+                    }
+                    Console.WriteLine("6) Return to Trade Terminal Main Menu");
+                    int userInput = Convert.ToInt32(Console.ReadLine());
+
+                    --trades;
+                    if (userInput == 1)
+                    {
+                        status.playerMoney -= items[0];
+                        playerInventory.Add(terminalItems[0]);
+                        Console.Clear();
+                        Console.WriteLine($"\n***{terminalItems[0]} has been added to your inventory!***");
+                        Console.SetCursorPosition(0, 0);
+                        Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in Alderan");
+                        Console.SetCursorPosition(100, 0);
+                        Console.WriteLine($"Moves Remaining : {trades - 5}");
+                    }
+                    else if (userInput == 2)
+                    {
+                        status.playerMoney -= items[1];
+                        playerInventory.Add(terminalItems[1]);
+                        Console.Clear();
+                        Console.WriteLine($"\n***{terminalItems[1]} has been added to your inventory!***");
+                        Console.SetCursorPosition(0, 0);
+                        Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in Alderan");
+                        Console.SetCursorPosition(100, 0);
+                        Console.WriteLine($"Moves Remaining : {trades - 5}");
+                    }
+                    else if (userInput == 3)
+                    {
+                        status.playerMoney -= items[2];
+                        playerInventory.Add(terminalItems[2]);
+                        Console.Clear();
+                        Console.WriteLine($"\n***{terminalItems[2]} has been added to your inventory!***");
+                        Console.SetCursorPosition(0, 0);
+                        Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in Alderan");
+                        Console.SetCursorPosition(100, 0);
+                        Console.WriteLine($"Moves Remaining : {trades - 5}");
+                    }
+                    else if (userInput == 4)
+                    {
+                        status.playerMoney -= items[3];
+                        playerInventory.Add(terminalItems[3]);
+                        Console.Clear();
+                        Console.WriteLine($"\n***{terminalItems[3]} has been added to your inventory!***");
+                        Console.SetCursorPosition(0, 0);
+                        Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in Alderan");
                         Console.SetCursorPosition(100, 0);
                         Console.WriteLine($"Moves Remaining : {trades - 5}");
                     }
                     else if (userInput == 5)
+                    {
+                        status.playerMoney -= items[4];
+                        playerInventory.Add(terminalItems[4]);
+                        Console.Clear();
+                        Console.WriteLine($"\n***{terminalItems[4]} have been added to your inventory!***");
+                        Console.SetCursorPosition(0, 0);
+                        Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in Alderan");
+                        Console.SetCursorPosition(100, 0);
+                        Console.WriteLine($"Moves Remaining : {trades - 5}");
+                    }
+                    else if (userInput == 6)
+                    {
+                        //place holder for option to return to terminal main menu
+                    }
+                } while (trades > 5);
+
+
+                Console.Clear();
+                Console.WriteLine("\nYou are out of trades at this terminal, you are now being returned to your ship\n");
+                Console.WriteLine("Ship");
+                Status.ship(status);
+            }else if (coordinates == (354,256)) // Sentinel
+            {
+                int currency = status.playerMoney;
+                int trades = status.totalTrades;
+                List<string> playerInventory = status.playerInventory;
+
+                int highGradeFuel = 1000;
+                int vitaminWater = 500;
+                int upgradedNavigationSystem = 3000;
+                int virtualGameStation = 4000;
+                int halfThePlanet = 75000;
+
+                string[] terminalItems = new string[] { "High-Grade Fuel", "Vitamin Water", "Upgraded Navigation System", "Virtual Game Station", "50% of Planet Land", };
+                int[] items = new int[] { highGradeFuel, vitaminWater, upgradedNavigationSystem, virtualGameStation, halfThePlanet };
+
+                do
+                {
+                    Console.SetCursorPosition(0, 0);
+                    Console.WriteLine($"Credits: {status.playerMoney}");
+                    Console.SetCursorPosition(35, 0);
+                    Console.WriteLine($"Welcome to the Trade Terminal in Sentinel");
+                    Console.SetCursorPosition(100, 0);
+                    Console.WriteLine($"Moves Remaining : {trades - 5}");
+
+                    Console.SetCursorPosition(0, 2);
+                    Console.WriteLine("Please select which item you want to purchase");
+                    for (int i = 0; i < items.Length; i++)
+                    {
+
+                        Console.Write($"{i + 1}) {items[i]}: ");
+                        Console.WriteLine(terminalItems[i]);
+
+                    }
+                    Console.WriteLine("6) Return to Trade Terminal Main Menu");
+                    int userInput = Convert.ToInt32(Console.ReadLine());
+
+                    --trades;
+                    if (userInput == 1)
+                    {
+                        status.playerMoney -= items[0];
+                        playerInventory.Add(terminalItems[0]);
+                        Console.Clear();
+                        Console.WriteLine($"\n***{terminalItems[0]} has been added to your inventory!***");
+                        Console.SetCursorPosition(0, 0);
+                        Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in Sentinel");
+                        Console.SetCursorPosition(100, 0);
+                        Console.WriteLine($"Moves Remaining : {trades - 5}");
+                    }
+                    else if (userInput == 2)
+                    {
+                        status.playerMoney -= items[1];
+                        playerInventory.Add(terminalItems[1]);
+                        Console.Clear();
+                        Console.WriteLine($"\n***{terminalItems[1]} has been added to your inventory!***");
+                        Console.SetCursorPosition(0, 0);
+                        Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in Sentinel");
+                        Console.SetCursorPosition(100, 0);
+                        Console.WriteLine($"Moves Remaining : {trades - 5}");
+                    }
+                    else if (userInput == 3)
+                    {
+                        status.playerMoney -= items[2];
+                        playerInventory.Add(terminalItems[2]);
+                        Console.Clear();
+                        Console.WriteLine($"\n***{terminalItems[2]} has been added to your inventory!***");
+                        Console.SetCursorPosition(0, 0);
+                        Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in Sentinel");
+                        Console.SetCursorPosition(100, 0);
+                        Console.WriteLine($"Moves Remaining : {trades - 5}");
+                    }
+                    else if (userInput == 4)
+                    {
+                        status.playerMoney -= items[3];
+                        playerInventory.Add(terminalItems[3]);
+                        Console.Clear();
+                        Console.WriteLine($"\n***{terminalItems[3]} has been added to your inventory!***");
+                        Console.SetCursorPosition(0, 0);
+                        Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in Sentinel");
+                        Console.SetCursorPosition(100, 0);
+                        Console.WriteLine($"Moves Remaining : {trades - 5}");
+                    }
+                    else if (userInput == 5)
+                    {
+                        status.playerMoney -= items[4];
+                        playerInventory.Add(terminalItems[4]);
+                        Console.Clear();
+                        Console.WriteLine($"\n***{terminalItems[4]} have been added to your inventory!***");
+                        Console.SetCursorPosition(0, 0);
+                        Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in Sentinel");
+                        Console.SetCursorPosition(100, 0);
+                        Console.WriteLine($"Moves Remaining : {trades - 5}");
+                    }
+                    else if (userInput == 6)
                     {
                         //place holder for option to return to terminal main menu
                     }
