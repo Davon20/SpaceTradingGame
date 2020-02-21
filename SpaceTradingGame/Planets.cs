@@ -21,7 +21,7 @@ namespace SpaceTradingGame
 
             //int currency = status.playerMoney;
             int trades = status.totalTrades;
-            
+            List<string> playerInventory = status.playerInventory;
 
             int highGradeFuel = 2000;
             int land = 1000;
@@ -39,7 +39,7 @@ namespace SpaceTradingGame
                 Console.SetCursorPosition(100, 0);
                 Console.WriteLine($"Moves Remaining : {trades -5}");
 
-                Console.SetCursorPosition(0, 1);
+                Console.SetCursorPosition(0, 2);
                 Console.WriteLine("Please select which item you want to purchase");
                 for (int i = 0; i < items.Length; i++)
                 {
@@ -54,6 +54,9 @@ namespace SpaceTradingGame
                 if (userInput == 1)
                 {
                     status.playerMoney -= highGradeFuel;
+                    playerInventory.Add(terminalItems[0]);
+                    Console.Clear();
+                    Console.WriteLine("\n***High-Grade Fuel has been added to your inventory!***");
                     Console.SetCursorPosition(0, 0);
                     Console.WriteLine($"Credits: {status.playerMoney}");
                     Console.SetCursorPosition(100, 0);
@@ -62,6 +65,9 @@ namespace SpaceTradingGame
                 else if (userInput == 2)
                 {
                     status.playerMoney -= land;
+                    playerInventory.Add(terminalItems[1]);
+                    Console.Clear();
+                    Console.WriteLine("\n***Alpha centuria land has been added to your inventory!***");
                     Console.SetCursorPosition(0, 0);
                     Console.WriteLine($"Credits: {status.playerMoney}");
                     Console.SetCursorPosition(100, 0);
@@ -70,6 +76,9 @@ namespace SpaceTradingGame
                 else if (userInput == 3)
                 {
                     status.playerMoney -= residents;
+                    playerInventory.Add(terminalItems[2]);
+                    Console.Clear();
+                    Console.WriteLine("\n***An alpha centurian resident has been added to your inventory!***");
                     Console.SetCursorPosition(0, 0);
                     Console.WriteLine($"Credits: {status.playerMoney}");
                     Console.SetCursorPosition(100, 0);
@@ -78,6 +87,9 @@ namespace SpaceTradingGame
                 else if (userInput == 4)
                 {
                     status.playerMoney -= rifle;
+                    playerInventory.Add(terminalItems[3]);
+                    Console.Clear();
+                    Console.WriteLine("\n***A rifle has been added to your inventory!***");
                     Console.SetCursorPosition(0, 0);
                     Console.WriteLine($"Credits: {status.playerMoney}");
                     Console.SetCursorPosition(100, 0);
@@ -86,6 +98,9 @@ namespace SpaceTradingGame
                 else if (userInput == 5)
                 {
                     status.playerMoney-= shipMissles;
+                    playerInventory.Add(terminalItems[4]);
+                    Console.Clear();
+                    Console.WriteLine("\n ***Ship Missles have been added to your inventory!***");
                     Console.SetCursorPosition(0, 0);
                     Console.WriteLine($"Credits: {status.playerMoney}");
                     Console.SetCursorPosition(100, 0);
@@ -126,6 +141,7 @@ namespace SpaceTradingGame
         }
         public static void Alderan()//if(tradeMenu(pressed b) -> Buy/Sell Buttons
         {
+            
             int lowGradeFuel = 500;
             int land = 3000;
             int residents = 2000;
@@ -137,8 +153,12 @@ namespace SpaceTradingGame
             string[] terminalItems = new string[] { "Low-Grade Fuel", "Alderan Land", "Alderan Residents", "art", "cigars", };
             int[] items = new int[] { lowGradeFuel, land, residents, art, cigars };
 
+           
+
+
             for (int i = 0; i < items.Length; i++)
             {
+
                 Console.Write($"{items[i]}: ");
                 Console.WriteLine(terminalItems[i]);
             }

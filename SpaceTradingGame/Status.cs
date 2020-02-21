@@ -9,6 +9,7 @@ namespace SpaceTradingGame
 {
     public class Status
     {
+        public  List<string> playerInventory = new List<string>() { "fruit", "meat", "jewels", "rifles", "pistols", "explosives", "missiles", "land", "residents", "miningTools" };
 
         public int moves = 5;
         public int totalTrades = 10;
@@ -47,30 +48,28 @@ namespace SpaceTradingGame
                 Console.WriteLine($"You have { totalTrades -= 1 } trades remaining.");
             }
         }
-        public static void Inventory()
+        public static void Inventory(List<string> item)
         {
-            List<int> items = new List<int>() { fruit, meat, jewels, rifles, pistols, explosives, missiles, land, residents, miningTools };
-            List<string> item = new List<string>() { "fruit", "meat", "jewels", "rifles", "pistols", "explosives", "missiles", "land", "residents", "miningTools" };
+            //List<int> items = new List<int>() { fruit, meat, jewels, rifles, pistols, explosives, missiles, land, residents, miningTools };
             
             
-            
-            
-            for (int i = 0; i < items.Count; i++)
+            foreach (string i in item)
             {
-                Console.Write($"{item[i]}: "); 
-                Console.WriteLine(items[i]);
+                Console.WriteLine(i);
             }
         }
         public static void ship(Status status)
         {
             (int, int) shipCoordinates = status.coordinates;
+
+            List<string> playerInv = status.playerInventory;
             
             Console.WriteLine("1: Check Inventory" + "\n2: Travel");
             string input = Console.ReadLine();
             if (input == "1")
             {
                 Console.Clear(); 
-                Inventory();
+                Inventory(playerInv);
             }
             else if (input == "2")
             {

@@ -12,6 +12,8 @@ namespace SpaceTradingGame
         {
             Status status = new Status();
             tradingTerminal.Purchase(status);
+
+            
         }
     }
 }
