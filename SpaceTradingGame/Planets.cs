@@ -11,8 +11,8 @@ namespace SpaceTradingGame
 
         public static void Earth() //if(tradeMenu(pressed b) -> Buy/Sell Buttons
         {
-            //(int, int) coordinates = (0, 0);
-            Console.WriteLine("Hello");
+            (int, int) coordinates = (0, 0);
+           //Console.WriteLine("Hello");
             // REquires if statement: Status.tradeCounter();
         }
         public static void alphaCenturia(Status status)//if(tradeMenu(pressed b) -> Buy/Sell Buttons
@@ -68,7 +68,6 @@ namespace SpaceTradingGame
             
            
 
-            //(int, int) coordinates = (354, 256);
         }
         public static void September()//if(tradeMenu(pressed b) -> Buy/Sell Buttons
         {
