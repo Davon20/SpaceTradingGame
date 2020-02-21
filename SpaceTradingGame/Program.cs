@@ -11,7 +11,8 @@ namespace SpaceTradingGame
         static void Main(string[] args)
         {
             Status status = new Status();
-            tradingTerminal.Purchase(status);
+            Status.ship(status);
+            tradingTerminal.TerminalMenu(status);
 
             
         }

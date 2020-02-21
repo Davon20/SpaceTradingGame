@@ -8,20 +8,34 @@ namespace SpaceTradingGame
     {
         public static void TerminalMenu(Status status)
         {
-           Planets planet = new Planets();
+            Planets planet = new Planets();
             int currency = status.playerMoney;
            
-                Console.SetCursorPosition(0, 0);
-                Console.WriteLine($"Credits: {currency}");
+           
+                
+            Console.WriteLine("Welcome to this planet's Trade Terminal! Please Select from the Following Options");
+            Console.WriteLine("1) Purchase");
+            Console.WriteLine("2) Sell");
+            Console.WriteLine("3) Exit");
+            string userInput = Console.ReadLine();
+            if (userInput == "1")
+            {
+                Console.Clear();
+                Purchase(status);
 
-                Console.SetCursorPosition(50, 0);
-                Console.WriteLine($"Welcome to the Trade Terminal {planet.name}");
+            }else if (userInput == "2")
+            {
+                Console.Clear();
+                Sell(status);
 
-                Console.SetCursorPosition(100, 0);
+            }else if (userInput == "3")
+            {
+                Console.Clear();
+                Exit(status);
+            }
+           
 
-                //status.moveCounter();
-
-                Console.WriteLine($"Moves remaining :{status.totalTrades}");
+            
 
         }
 
@@ -29,7 +43,7 @@ namespace SpaceTradingGame
         {
             (int, int) coordinates = status.coordinates;
                      
-            if (coordinates == (164,300)) //alderan
+            if (coordinates == (183,147)) // Alpha Centuria 1
             {
 
                 int currency = status.playerMoney;
@@ -54,7 +68,7 @@ namespace SpaceTradingGame
                     Console.SetCursorPosition(100, 0);
                     Console.WriteLine($"Moves Remaining : {trades - 5}");
 
-                    Console.SetCursorPosition(0, 2);
+                    Console.SetCursorPosition(0, 3);
                     Console.WriteLine("Please select which item you want to purchase");
                     for (int i = 0; i < items.Length; i++)
                     {
@@ -134,15 +148,17 @@ namespace SpaceTradingGame
                     }
                     else if (userInput == 6)
                     {
-                        //place holder for option to return to terminal main menu
+                        Console.Clear();
+                        TerminalMenu(status);
                     }
                 } while (trades > 5);
 
-
-                Console.Clear();
-                Console.WriteLine("\nYou are out of trades at this terminal, you are now being returned to your ship\n");
-                Console.WriteLine("Ship");
-                Status.ship(status);
+              
+                    Console.Clear();
+                    Console.WriteLine("\nYou are out of trades at this terminal, you are now being returned to your ship\n");
+                    Console.WriteLine("Ship");
+                    Status.ship(status);
+               
 
             }else if (coordinates == (250,140)) //Tattooine
             {
@@ -168,7 +184,7 @@ namespace SpaceTradingGame
                     Console.SetCursorPosition(100, 0);
                     Console.WriteLine($"Moves Remaining : {trades - 5}");
 
-                    Console.SetCursorPosition(0, 2);
+                    Console.SetCursorPosition(0, 3);
                     Console.WriteLine("Please select which item you want to purchase");
                     for (int i = 0; i < items.Length; i++)
                     {
@@ -248,7 +264,8 @@ namespace SpaceTradingGame
                     }
                     else if (userInput == 6)
                     {
-                        //place holder for option to return to terminal main menu
+                        Console.Clear();
+                        TerminalMenu(status);
                     }
                 } while (trades > 5);
 
@@ -282,7 +299,7 @@ namespace SpaceTradingGame
                     Console.SetCursorPosition(100, 0);
                     Console.WriteLine($"Moves Remaining : {trades - 5}");
 
-                    Console.SetCursorPosition(0, 2);
+                    Console.SetCursorPosition(0, 3);
                     Console.WriteLine("Please select which item you want to purchase");
                     for (int i = 0; i < items.Length; i++)
                     {
@@ -362,7 +379,8 @@ namespace SpaceTradingGame
                     }
                     else if (userInput == 6)
                     {
-                        //place holder for option to return to terminal main menu
+                        Console.Clear();
+                        TerminalMenu(status);
                     }
                 } while (trades > 5);
 
@@ -395,7 +413,7 @@ namespace SpaceTradingGame
                     Console.SetCursorPosition(100, 0);
                     Console.WriteLine($"Moves Remaining : {trades - 5}");
 
-                    Console.SetCursorPosition(0, 2);
+                    Console.SetCursorPosition(0, 3);
                     Console.WriteLine("Please select which item you want to purchase");
                     for (int i = 0; i < items.Length; i++)
                     {
@@ -476,7 +494,8 @@ namespace SpaceTradingGame
                     }
                     else if (userInput == 6)
                     {
-                        //place holder for option to return to terminal main menu
+                        Console.Clear();
+                        TerminalMenu(status);
                     }
                 } while (trades > 5);
 
@@ -509,7 +528,7 @@ namespace SpaceTradingGame
                     Console.SetCursorPosition(100, 0);
                     Console.WriteLine($"Moves Remaining : {trades - 5}");
 
-                    Console.SetCursorPosition(0, 2);
+                    Console.SetCursorPosition(0, 3);
                     Console.WriteLine("Please select which item you want to purchase");
                     for (int i = 0; i < items.Length; i++)
                     {
@@ -590,7 +609,8 @@ namespace SpaceTradingGame
                     }
                     else if (userInput == 6)
                     {
-                        //place holder for option to return to terminal main menu
+                        Console.Clear();
+                        TerminalMenu(status);
                     }
                 } while (trades > 5);
 
@@ -602,25 +622,54 @@ namespace SpaceTradingGame
             }
         }
 
-        public static void sell(Status status)
+        public static void Sell(Status status)
         {
-            int highGradeFuel = 2000;
-            int land = 1000;
-            int residents = 1500;
-            int rifle = 750;
-            int shipMissles = 3000;
-            int lowGradeFuel = 1000;
-            int pistol = 250;
-            int rareMetals = 3500;
-            int vitaminWater = 500;
-            int upgradedNavigationSystem = 3000;
-            int virtualGameStation = 4000;
-            int halfThePlanet = 75000;
-            int missiles = 5000;
-           
+            int highGradeFuel = 6000;
+            int shipMissles = 6000;
+            int lowGradeFuel = 2000;
+            int rareMetals = 7000;
+            int vitaminWater = 1000;
+            int upgradedNavigationSystem = 6000;
+            int virtualGameStation = 8000;
+            int halfThePlanet = 150000;
+            
+            List<string> playerInventory = status.playerInventory;
+
+            int[] gameItems = new int[]
+            {status.fruit,status.meat, status.jewels,status.rifles,status.pistols,status.explosives,status.missiles, status.land, highGradeFuel,status.residents, status.miningTools,
+             shipMissles, lowGradeFuel,  rareMetals, vitaminWater, upgradedNavigationSystem,virtualGameStation, halfThePlanet, };
+
+            if (status.coordinates == (183,147))
+            {
+                do
+                {
+                    Console.SetCursorPosition(0, 0);
+                    Console.WriteLine($"Credits: {status.playerMoney}");
+                    Console.SetCursorPosition(35, 0);
+                    Console.WriteLine($"Welcome to the Trade Terminal in Alpha Centuria 1");
+                    Console.SetCursorPosition(100, 0);
+                    Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
+
+                    Console.SetCursorPosition(0, 2);
+                    Console.WriteLine("Please select which item you want to sell");
+                    for (int i = 0; i < playerInventory.Count; i++)
+                    {
+
+                        Console.Write($"{i + 1}) {playerInventory[i]}: ");
+                        Console.WriteLine(gameItems[i]*2);
+
+                    }
+                    Console.WriteLine("6) Return to Trade Terminal Main Menu");
+                    int userInput = Convert.ToInt32(Console.ReadLine());
+
+                    --status.totalTrades;
 
 
-            int currency = status.playerMoney;
+                } while (status.totalTrades > 5);
+            }
+
+
+            
                     
         }
 
@@ -631,10 +680,12 @@ namespace SpaceTradingGame
 
             if (userInput == "Y" || userInput == "y")
             {
+                Console.Clear();
                 Console.WriteLine( "Returning to ship");
                 Status.ship(status);
             }else if (userInput == "N" || userInput == "n")
             {
+                Console.Clear();
                 TerminalMenu(status);
             }
         }
