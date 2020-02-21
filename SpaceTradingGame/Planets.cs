@@ -193,14 +193,14 @@ namespace SpaceTradingGame
         {
             (int, int) coordinates = (496, 532);
 
-            //int highGradeFuel = 2500;
-            //int land = 4000;
-            //int residents = 3000;
-            //int missiles = 5000;
-            //int pistol = 750;
-            
-            //string[] terminalItems = new string[] { "High-Grade Fuel", "September Land", "September Residents", "Missiles", "Pistol" };
-            //int[] items = new int[] { highGradeFuel, land, residents, missiles, pistol };
+            int highGradeFuel = 2500;
+            int land = 4000;
+            int residents = 3000;
+            int missiles = 5000;
+            int pistol = 750;
+
+            string[] terminalItems = new string[] { "High-Grade Fuel", "September Land", "September Residents", "Missiles", "Pistol" };
+            int[] items = new int[] { highGradeFuel, land, residents, missiles, pistol };
 
             //for (int i = 0; i < items.Length; i++)
             //{

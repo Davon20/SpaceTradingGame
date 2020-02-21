@@ -29,7 +29,7 @@ namespace SpaceTradingGame
         {
             (int, int) coordinates = status.coordinates;
                      
-            if (coordinates == (0,0)) //alderan
+            if (coordinates == (164,300)) //alderan
             {
 
                 int currency = status.playerMoney;
@@ -472,6 +472,121 @@ namespace SpaceTradingGame
                         Console.WriteLine($"Welcome to the Trade Terminal in Sentinel");
                         Console.SetCursorPosition(100, 0);
                         Console.WriteLine($"Moves Remaining : {trades - 5}");
+                        
+                    }
+                    else if (userInput == 6)
+                    {
+                        //place holder for option to return to terminal main menu
+                    }
+                } while (trades > 5);
+
+
+                Console.Clear();
+                Console.WriteLine("\nYou are out of trades at this terminal, you are now being returned to your ship\n");
+                Console.WriteLine("Ship");
+                Status.ship(status);
+            }else if (coordinates == (496,532))// September
+            {
+                int currency = status.playerMoney;
+                int trades = status.totalTrades;
+                List<string> playerInventory = status.playerInventory;
+
+                int highGradeFuel = 2500;
+                int land = 4000;
+                int residents = 3000;
+                int missiles = 5000;
+                int pistol = 750;
+
+                string[] terminalItems = new string[] { "High-Grade Fuel", "September Land", "September Residents", "Missiles", "Pistol" };
+                int[] items = new int[] { highGradeFuel, land, residents, missiles, pistol };
+
+                do
+                {
+                    Console.SetCursorPosition(0, 0);
+                    Console.WriteLine($"Credits: {status.playerMoney}");
+                    Console.SetCursorPosition(35, 0);
+                    Console.WriteLine($"Welcome to the Trade Terminal in September");
+                    Console.SetCursorPosition(100, 0);
+                    Console.WriteLine($"Moves Remaining : {trades - 5}");
+
+                    Console.SetCursorPosition(0, 2);
+                    Console.WriteLine("Please select which item you want to purchase");
+                    for (int i = 0; i < items.Length; i++)
+                    {
+
+                        Console.Write($"{i + 1}) {items[i]}: ");
+                        Console.WriteLine(terminalItems[i]);
+
+                    }
+                    Console.WriteLine("6) Return to Trade Terminal Main Menu");
+                    int userInput = Convert.ToInt32(Console.ReadLine());
+
+                    --trades;
+                    if (userInput == 1)
+                    {
+                        status.playerMoney -= items[0];
+                        playerInventory.Add(terminalItems[0]);
+                        Console.Clear();
+                        Console.WriteLine($"\n***{terminalItems[0]} has been added to your inventory!***");
+                        Console.SetCursorPosition(0, 0);
+                        Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in September");
+                        Console.SetCursorPosition(100, 0);
+                        Console.WriteLine($"Moves Remaining : {trades - 5}");
+                    }
+                    else if (userInput == 2)
+                    {
+                        status.playerMoney -= items[1];
+                        playerInventory.Add(terminalItems[1]);
+                        Console.Clear();
+                        Console.WriteLine($"\n***{terminalItems[1]} has been added to your inventory!***");
+                        Console.SetCursorPosition(0, 0);
+                        Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in September");
+                        Console.SetCursorPosition(100, 0);
+                        Console.WriteLine($"Moves Remaining : {trades - 5}");
+                    }
+                    else if (userInput == 3)
+                    {
+                        status.playerMoney -= items[2];
+                        playerInventory.Add(terminalItems[2]);
+                        Console.Clear();
+                        Console.WriteLine($"\n***{terminalItems[2]} has been added to your inventory!***");
+                        Console.SetCursorPosition(0, 0);
+                        Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in September");
+                        Console.SetCursorPosition(100, 0);
+                        Console.WriteLine($"Moves Remaining : {trades - 5}");
+                    }
+                    else if (userInput == 4)
+                    {
+                        status.playerMoney -= items[3];
+                        playerInventory.Add(terminalItems[3]);
+                        Console.Clear();
+                        Console.WriteLine($"\n***{terminalItems[3]} has been added to your inventory!***");
+                        Console.SetCursorPosition(0, 0);
+                        Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in September");
+                        Console.SetCursorPosition(100, 0);
+                        Console.WriteLine($"Moves Remaining : {trades - 5}");
+                    }
+                    else if (userInput == 5)
+                    {
+                        status.playerMoney -= items[4];
+                        playerInventory.Add(terminalItems[4]);
+                        Console.Clear();
+                        Console.WriteLine($"\n***{terminalItems[4]} have been added to your inventory!***");
+                        Console.SetCursorPosition(0, 0);
+                        Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in September");
+                        Console.SetCursorPosition(100, 0);
+                        Console.WriteLine($"Moves Remaining : {trades - 5}");
+
                     }
                     else if (userInput == 6)
                     {
@@ -489,7 +604,22 @@ namespace SpaceTradingGame
 
         public static void sell(Status status)
         {
-            
+            int highGradeFuel = 2000;
+            int land = 1000;
+            int residents = 1500;
+            int rifle = 750;
+            int shipMissles = 3000;
+            int lowGradeFuel = 1000;
+            int pistol = 250;
+            int rareMetals = 3500;
+            int vitaminWater = 500;
+            int upgradedNavigationSystem = 3000;
+            int virtualGameStation = 4000;
+            int halfThePlanet = 75000;
+            int missiles = 5000;
+           
+
+
             int currency = status.playerMoney;
                     
         }
