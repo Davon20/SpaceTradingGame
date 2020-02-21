@@ -9,23 +9,25 @@ namespace SpaceTradingGame
 {
     public class Status
     {
+        public  List<string> playerInventory = new List<string>() { "fruit", "meat", "jewels", "rifles", "pistols", "explosives", "missiles", "land", "residents", "miningTools" };
+        
 
         public int moves = 5;
         public int totalTrades = 10;
         public int years = 18;
         public int playerMoney = 50000;
-        public (int, int) coordinates = (0, 0);
+        public (int, int) coordinates = (250,140);
         
-        public static int fruit = 5;
-        public static int meat = 10;
-        public static int jewels = 1000;
-        public static int rifles = 1500;
-        public static int pistols = 750;
-        public static int explosives = 2000;
-        public static int missiles = 2500;
-        public static int land = 5000;
-        public static int residents = 3000;
-        public static int miningTools = 1000;
+        public  int fruit = 5;
+        public  int meat = 10;
+        public  int jewels = 1000;
+        public  int rifles = 1500;
+        public  int pistols = 750;
+        public  int explosives = 2000;
+        public  int missiles = 2500;
+        public  int land = 5000;
+        public  int residents = 3000;
+        public  int miningTools = 1000;
         public void moveCounter()
         {
             for (int i = 0; moves > 0; i++)
@@ -47,30 +49,37 @@ namespace SpaceTradingGame
                 Console.WriteLine($"You have { totalTrades -= 1 } trades remaining.");
             }
         }
-        public static void Inventory()
+        public static void Inventory(List<string> item)
         {
-            List<int> items = new List<int>() { fruit, meat, jewels, rifles, pistols, explosives, missiles, land, residents, miningTools };
-            List<string> item = new List<string>() { "fruit", "meat", "jewels", "rifles", "pistols", "explosives", "missiles", "land", "residents", "miningTools" };
+            //List<int> items = new List<int>() { fruit, meat, jewels, rifles, pistols, explosives, missiles, land, residents, miningTools };
             
             
-            
-            
-            for (int i = 0; i < items.Count; i++)
+            foreach (string i in item)
             {
-                Console.Write($"{item[i]}: "); 
-                Console.WriteLine(items[i]);
+                Console.WriteLine(i);
             }
         }
         public static void ship(Status status)
         {
             (int, int) shipCoordinates = status.coordinates;
+
+            List<string> playerInv = status.playerInventory;
             
             Console.WriteLine("1: Check Inventory" + "\n2: Travel");
             string input = Console.ReadLine();
             if (input == "1")
             {
                 Console.Clear(); 
-                Inventory();
+                Inventory(playerInv);
+                Console.WriteLine("\n ***Press <Enter> to return to the ship menu**");
+                Console.ReadLine();
+                do
+                {
+                   Console.Clear();
+                    ship(status);                   
+                }
+                while (Console.ReadKey().Key != ConsoleKey.Enter) ;
+
             }
             else if (input == "2")
             {
@@ -82,34 +91,52 @@ namespace SpaceTradingGame
                 switch (travel)
                 {
                     case 1:
+                        status.coordinates = (183, 147);
                         Console.BackgroundColor = ConsoleColor.DarkGray;
-                        Console.Clear();
                         Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Clear();
+                        Console.SetCursorPosition(0, 1);
                         Console.WriteLine("\nWelcome to Alpha Centuria, a low income planet. Feel free to trade at your leisure.");
+                        tradingTerminal.Purchase(status);
                         break;
                     case 2:
-                        Console.Clear();
+                        status.coordinates = (250, 140);
                         Console.BackgroundColor = ConsoleColor.DarkMagenta;
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Clear();
+                        Console.SetCursorPosition(0, 2);
                         Console.WriteLine("Welcome to Tatooine, you've arrived to a desert planet.");
-                        Console.ReadLine();
+                        tradingTerminal.Purchase(status);
+                       // tradingTerminal.Sell(status);
+                       // Console.ReadLine();
                         break;
                     case 3:
-                        Console.Clear();
+                        status.coordinates = (164, 300);
                         Console.BackgroundColor = ConsoleColor.DarkYellow;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.Clear();
+                        Console.SetCursorPosition(0, 2);
                         Console.WriteLine("Welcome to Alderan, a planet full of life, actvity, and space pirates.");
-                        Console.ReadLine();
+                        tradingTerminal.Purchase(status);
+                        // Console.ReadLine();
                         break;
-                    case 4:
+                    case 4: status.coordinates = (354, 256);
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.Clear();
-                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.SetCursorPosition(0, 2);
                         Console.WriteLine("Welcome to Sentinel, a highly advanced civilization resides here.");
-                        Console.ReadLine();
+                        tradingTerminal.Purchase(status);
+                        //Console.ReadLine();
                         break;
-                    case 5:
+                    case 5: status.coordinates = (496, 532);
+                        Console.BackgroundColor = ConsoleColor.DarkBlue;
+                        Console.ForegroundColor = ConsoleColor.Black;
                         Console.Clear();
-                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.SetCursorPosition(0, 2);
                         Console.WriteLine("Welcome to September, home of the Space Police Academy.");
-                        Console.ReadLine();
+                        tradingTerminal.Purchase(status);
+                        // Console.ReadLine();
                         break;
                 }
             }
