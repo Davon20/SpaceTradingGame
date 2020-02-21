@@ -12,11 +12,11 @@ namespace SpaceTradingGame
     {
         static void Main(string[] args)
         {
-            Status status = new Status();
-            Status.ship(status);
-            tradingTerminal.TerminalMenu(status);
+            Menu menu = new Menu();
+            Menu.UserMenu();
 
-            
+            Status status = new Status();
+            Status.ship(status);            
         }
     }
 }

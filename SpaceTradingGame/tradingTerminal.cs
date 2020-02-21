@@ -664,13 +664,8 @@ namespace SpaceTradingGame
 
                     --status.totalTrades;
 
-
                 } while (status.totalTrades > 5);
-            }
-
-
-            
-                    
+            }       
         }
 
         public static void Exit (Status status)
@@ -688,9 +683,6 @@ namespace SpaceTradingGame
                 Console.Clear();
                 TerminalMenu(status);
             }
-
-            
         }
-      
     }
 }
