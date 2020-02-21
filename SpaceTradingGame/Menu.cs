@@ -25,35 +25,43 @@ namespace SpaceTradingGame
                 }
                 Console.CursorVisible = false;
                 counter++;
-                Thread.Sleep(150);
+                Thread.Sleep(100);
             }
 
-            Console.SetCursorPosition(0, 0);
+            Console.SetCursorPosition(52, 15);
             Console.WriteLine("[1] New Game");
+            Console.SetCursorPosition(46, 16);
             Console.WriteLine("[2] Continue Saved Game");
+            Console.SetCursorPosition(52, 17);
             Console.WriteLine("[3] Exit");
             do
             {
-                int uI = Convert.ToInt32(Console.ReadLine());
-                switch (uI)
+                string uI = Console.ReadLine();
+                if (uI == "1")
                 {
-                    case 1:
-                        New();
-                        Console.Clear();
-                        
-                        Status status = new Status();
-                        Status.ship(status);
-                        break;
+                    New();
+                    Console.Clear();
 
-                    case 2:
-                        Load();
-                        break;
-
-                    case 3:
-                        Exit();
-                        break;
-
+                    Status status = new Status();
+                    Status.ship(status);
+                    break;
                 }
+                else if (uI == "2")
+                {
+                    Load();
+                    break;
+                }
+                else if (uI == "3")
+                {
+                    Exit();
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Please only enter 1, 2, or 3!");
+                    Console.Clear();
+                    UserMenu();
+                }                
             } while (true);
         }
 
