@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO.Enumeration;
+using System.Threading; 
 
 
 namespace SpaceTradingGame
@@ -10,9 +12,9 @@ namespace SpaceTradingGame
     {
         static void Main(string[] args)
         {
-            Status status = new Status();
-            tradingTerminal.Purchase(status);
-
+            Menu men = new Menu();
+            Menu.UserMenu();
         }
+
     }
 }

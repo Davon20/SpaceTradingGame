@@ -2,13 +2,33 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Drawing;
+using System.Linq;
+using System.Threading; 
 
 namespace SpaceTradingGame
 {
     class Menu
     {
-        public static  void UserMenu ()
+        public static void UserMenu()
         {
+            var counter = 0;
+            for (int i = 0; i < 50; i++)
+            {
+                Console.SetCursorPosition(40, 13);
+                switch (counter % 4)
+                {
+                    case 0: Console.Write("WELCOME TO THE ULTIMATE SPACE TRADER!", Console.BackgroundColor = ConsoleColor.Black); break;
+                    case 1: Console.Write("WELCOME TO THE ULTIMATE SPACE TRADER!", Console.ForegroundColor = ConsoleColor.White); break;
+                    case 3: Console.Write("WELCOME TO THE ULTIMATE SPACE TRADER!", Console.BackgroundColor = ConsoleColor.White); break;
+                    case 2: Console.Write("WELCOME TO THE ULTIMATE SPACE TRADER!", Console.ForegroundColor = ConsoleColor.Black); break;
+                }
+                Console.CursorVisible = false;
+                counter++;
+                Thread.Sleep(150);
+            }
+
+            Console.SetCursorPosition(0, 0);
             Console.WriteLine("[1] New Game");
             Console.WriteLine("[2] Continue Saved Game");
             Console.WriteLine("[3] Exit");
@@ -19,6 +39,10 @@ namespace SpaceTradingGame
                 {
                     case 1:
                         New();
+                        Console.Clear();
+                        
+                        Status status = new Status();
+                        Status.ship(status);
                         break;
 
                     case 2:
@@ -31,11 +55,11 @@ namespace SpaceTradingGame
 
                 }
             } while (true);
-        }       
+        }
 
         public static void New()
         {
-            using (StreamWriter sw = new StreamWriter(@"C:\Users\turck\Documents\MSSA Cohort 8\cs projects\11FEB_SpaceTradingGame\SpaceTradingGame\SpaceTradingGame\SaveFile.Txt"))
+            using (StreamWriter sw = new StreamWriter(@"C:\Users\davon\source\repos\SpaceTradingGame\SpaceTradingGame\SaveFile.Txt"))
             {
                 sw.WriteLine();
             }
@@ -43,7 +67,7 @@ namespace SpaceTradingGame
 
         public static void Load()
         {
-            using (StreamReader sr = new StreamReader(@"C:\Users\turck\Documents\MSSA Cohort 8\cs projects\11FEB_SpaceTradingGame\SpaceTradingGame\SpaceTradingGame\SaveFile.Txt"))
+            using (StreamReader sr = new StreamReader(@"C:\Users\davon\source\repos\SpaceTradingGame\SpaceTradingGame\SaveFile.Txt"))
             {
                 sr.ReadLine();
             }           

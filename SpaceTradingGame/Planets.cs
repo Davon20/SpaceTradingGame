@@ -11,13 +11,13 @@ namespace SpaceTradingGame
 
         public static void Earth() //if(tradeMenu(pressed b) -> Buy/Sell Buttons
         {
-            (int, int) coordinates = (0, 0);
+            //(int, int) coordinates = (0, 0);
             Console.WriteLine("Hello");
             // REquires if statement: Status.tradeCounter();
         }
         public static void alphaCenturia(Status status)//if(tradeMenu(pressed b) -> Buy/Sell Buttons
         {
-            (int, int) coordinates = (183, 147);
+            //(int, int) coordinates = (183, 147);
 
             //int currency = status.playerMoney;
             int trades = status.totalTrades;
@@ -102,7 +102,7 @@ namespace SpaceTradingGame
        
         public static void Tatooine()//if(tradeMenu(pressed b) -> Buy/Sell Buttons
         {
-            (int, int) coordinates = (250, 140);
+            //(int, int) coordinates = (250, 140);
 
             int lowGradeFuel = 1000;
             int land = 500;
@@ -132,7 +132,7 @@ namespace SpaceTradingGame
             int art = 4000;
             int cigars = 2000; 
 
-            (int, int) coordinates = (164, 300);
+            //(int, int) coordinates = (164, 300);
 
             string[] terminalItems = new string[] { "Low-Grade Fuel", "Alderan Land", "Alderan Residents", "art", "cigars", };
             int[] items = new int[] { lowGradeFuel, land, residents, art, cigars };
@@ -160,11 +160,11 @@ namespace SpaceTradingGame
                 Console.WriteLine(terminalItems[i]);
             }
 
-            (int, int) coordinates = (354, 256);
+            //(int, int) coordinates = (354, 256);
         }
         public static void September()//if(tradeMenu(pressed b) -> Buy/Sell Buttons
         {
-            (int, int) coordinates = (496, 532);
+            //(int, int) coordinates = (496, 532);
 
             int highGradeFuel = 2500;
             int land = 4000;
