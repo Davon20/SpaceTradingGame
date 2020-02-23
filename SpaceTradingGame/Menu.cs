@@ -12,21 +12,42 @@ namespace SpaceTradingGame
     {
         public static void UserMenu()
         {
-            var counter = 0;
-            for (int i = 0; i < 50; i++)
+            var counter2 = 0;
+            Console.SetCursorPosition(25, 9);
+            Console.WriteLine("+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+");
+            Console.SetCursorPosition(25, 13);
+            Console.WriteLine("+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+");
+
+            for (int j = 0; j < 82; j++)
             {
-                Console.SetCursorPosition(40, 13);
-                switch (counter % 4)
-                {
-                    case 0: Console.Write("WELCOME TO THE ULTIMATE SPACE TRADER!", Console.BackgroundColor = ConsoleColor.Black); break;
-                    case 1: Console.Write("WELCOME TO THE ULTIMATE SPACE TRADER!", Console.ForegroundColor = ConsoleColor.White); break;
-                    case 3: Console.Write("WELCOME TO THE ULTIMATE SPACE TRADER!", Console.BackgroundColor = ConsoleColor.White); break;
-                    case 2: Console.Write("WELCOME TO THE ULTIMATE SPACE TRADER!", Console.ForegroundColor = ConsoleColor.Black); break;
-                }
+                
+                string intro = "WELCOME TO THE ULTIMATE SPACE TRADER!";
                 Console.CursorVisible = false;
-                counter++;
+                var margin = " ".PadLeft(j);
+
+                Console.SetCursorPosition(0, 11);
+
+                switch (counter2 % 4)
+                {
+                    case 0: Console.Write(margin + intro, Console.BackgroundColor = ConsoleColor.Black); break;
+                    case 1: Console.Write(margin + intro, Console.ForegroundColor = ConsoleColor.White); break;
+                    case 3: Console.Write(margin + intro, Console.BackgroundColor = ConsoleColor.White); break;
+                    case 2: Console.Write(margin + intro, Console.ForegroundColor = ConsoleColor.Black); break;
+                }
                 Thread.Sleep(100);
+                counter2++;
             }
+
+            Console.WriteLine();
+            Console.Clear();
+            Console.SetCursorPosition(25, 9);
+            Console.WriteLine("+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+");
+
+            Console.SetCursorPosition(40, 11);
+            Console.WriteLine("WELCOME TO THE ULTIMATE SPACE TRADER!");
+
+            Console.SetCursorPosition(25, 13);
+            Console.WriteLine("+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+--+");
 
             Console.SetCursorPosition(52, 15);
             Console.WriteLine("[1] New Game");
