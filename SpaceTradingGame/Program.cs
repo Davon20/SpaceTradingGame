@@ -10,6 +10,7 @@ namespace SpaceTradingGame
 {
     class Program
     {
+       
         static void Main(string[] args)
         {
             Menu menu = new Menu();
@@ -18,5 +19,6 @@ namespace SpaceTradingGame
             Status status = new Status();
             Status.ship(status);            
         }
+        
     }
 }

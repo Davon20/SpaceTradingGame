@@ -71,7 +71,7 @@ namespace SpaceTradingGame
         }
         public static void September()//if(tradeMenu(pressed b) -> Buy/Sell Buttons
         {
-            //(int, int) coordinates = (496, 532);
+            (int, int) coordinates = (496, 532);
 
             //int highGradeFuel = 2500;
             //int land = 4000;

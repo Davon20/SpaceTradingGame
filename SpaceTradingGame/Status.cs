@@ -9,25 +9,29 @@ namespace SpaceTradingGame
 {
     public class Status
     {
-        public  List<string> playerInventory = new List<string>() { "fruit", "meat", "jewels", "rifles", "pistols", "explosives", "missiles", "land", "residents", "miningTools" };
-        
+        public List<string> playerInventory = new List<string>() { "fruit", "meat", "jewels", "rifles", "pistols", "explosives", "missiles", "land", "residents", "miningTools" };
+        public List<int> playerInventoryPrice = new List<int>() { 5, 10, 1000, 1500, 750, 2000, 2500, 5000, 3000, 1000 };
+        public  int inventorySize = 10;
+
 
         public int moves = 5;
         public int totalTrades = 10;
         public int years = 18;
         public int playerMoney = 50000;
-        public (int, int) coordinates = (250,140);
+        public (int, int) coordinates = (250, 140);
+
+        public int fruit = 5;
+        public int meat = 10;
+        public int jewels = 1000;
+        public int rifles = 1500;
+        public int pistols = 750;
+        public int explosives = 2000;
+        public int missiles = 2500;
+        public int land = 5000;
+        public int residents = 3000;
+        public int miningTools = 1000;
+
         
-        public  int fruit = 5;
-        public  int meat = 10;
-        public  int jewels = 1000;
-        public  int rifles = 1500;
-        public  int pistols = 750;
-        public  int explosives = 2000;
-        public  int missiles = 2500;
-        public  int land = 5000;
-        public  int residents = 3000;
-        public  int miningTools = 1000;
         public void moveCounter()
         {
             for (int i = 0; moves > 0; i++)
@@ -51,13 +55,16 @@ namespace SpaceTradingGame
         }
         public static void Inventory(List<string> item)
         {
-            //List<int> items = new List<int>() { fruit, meat, jewels, rifles, pistols, explosives, missiles, land, residents, miningTools };
-            
-            
-            foreach (string i in item)
+            for (int i = 0; i < item.Count; i++)
             {
-                Console.WriteLine(i);
+                Console.WriteLine($"{i + 1}) {item[i]} ");
             }
+
+
+            //    foreach (string i in item)
+            //{
+            //    Console.WriteLine($"{i +1 }{i}");
+            //}
         }
         public static void ship(Status status)
         {
@@ -97,7 +104,8 @@ namespace SpaceTradingGame
                         Console.Clear();
                         Console.SetCursorPosition(0, 1);
                         Console.WriteLine("\nWelcome to Alpha Centuria, a low income planet. Feel free to trade at your leisure.");
-                        tradingTerminal.Purchase(status);
+                        
+                        tradingTerminal.TerminalMenu(status);
                         break;
                     case 2:
                         status.coordinates = (250, 140);
@@ -106,9 +114,9 @@ namespace SpaceTradingGame
                         Console.Clear();
                         Console.SetCursorPosition(0, 2);
                         Console.WriteLine("Welcome to Tatooine, you've arrived to a desert planet.");
-                        tradingTerminal.Purchase(status);
-                       // tradingTerminal.Sell(status);
-                       // Console.ReadLine();
+                        tradingTerminal.TerminalMenu(status);
+                        // tradingTerminal.Sell(status);
+                        // Console.ReadLine();
                         break;
                     case 3:
                         status.coordinates = (164, 300);
@@ -117,7 +125,7 @@ namespace SpaceTradingGame
                         Console.Clear();
                         Console.SetCursorPosition(0, 2);
                         Console.WriteLine("Welcome to Alderan, a planet full of life, actvity, and space pirates.");
-                        tradingTerminal.Purchase(status);
+                        tradingTerminal.TerminalMenu(status);
                         // Console.ReadLine();
                         break;
                     case 4: status.coordinates = (354, 256);
@@ -126,7 +134,7 @@ namespace SpaceTradingGame
                         Console.Clear();
                         Console.SetCursorPosition(0, 2);
                         Console.WriteLine("Welcome to Sentinel, a highly advanced civilization resides here.");
-                        tradingTerminal.Purchase(status);
+                        tradingTerminal.TerminalMenu(status);
                         //Console.ReadLine();
                         break;
                     case 5: status.coordinates = (496, 532);
@@ -135,7 +143,7 @@ namespace SpaceTradingGame
                         Console.Clear();
                         Console.SetCursorPosition(0, 2);
                         Console.WriteLine("Welcome to September, home of the Space Police Academy.");
-                        tradingTerminal.Purchase(status);
+                        tradingTerminal.TerminalMenu(status);
                         // Console.ReadLine();
                         break;
                 }

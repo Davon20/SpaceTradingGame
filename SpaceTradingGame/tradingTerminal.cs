@@ -9,7 +9,8 @@ namespace SpaceTradingGame
         public static void TerminalMenu(Status status)
         {
             Planets planet = new Planets();
-            int currency = status.playerMoney;
+           // int currency = status.playerMoney;
+
            
            
                 
@@ -42,13 +43,19 @@ namespace SpaceTradingGame
         public static void Purchase(Status status)
         {
             (int, int) coordinates = status.coordinates;
-                     
+
+          
+
+
             if (coordinates == (183,147)) // Alpha Centuria 1
             {
 
+               
+                List<string> playerInventory = status.playerInventory;
+                List<int> playerInventoryPrice = status.playerInventoryPrice;
+
                 int currency = status.playerMoney;
                 int trades = status.totalTrades;
-                List<string> playerInventory = status.playerInventory;
 
                 int highGradeFuel = 2000;
                 int land = 1000;
@@ -83,6 +90,8 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items[0];
                         playerInventory.Add(terminalItems[0]);
+                        playerInventoryPrice.Add(items[0]);
+                        status.inventorySize++;
                         Console.Clear();
                         Console.WriteLine("\n***High-Grade Fuel has been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -96,6 +105,7 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items[1];
                         playerInventory.Add(terminalItems[1]);
+                        playerInventoryPrice.Add(items[1]);
                         Console.Clear();
                         Console.WriteLine("\n***Alpha centuria land has been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -109,6 +119,7 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items[2];
                         playerInventory.Add(terminalItems[2]);
+                        playerInventoryPrice.Add(items[2]);
                         Console.Clear();
                         Console.WriteLine("\n***An alpha centurian resident has been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -122,6 +133,7 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items[3];
                         playerInventory.Add(terminalItems[3]);
+                        playerInventoryPrice.Add(items[3]);
                         Console.Clear();
                         Console.WriteLine("\n***A rifle has been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -135,6 +147,7 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items[4];
                         playerInventory.Add(terminalItems[4]);
+                        playerInventoryPrice.Add(items[4]);
                         Console.Clear();
                         Console.WriteLine("\n ***Ship Missles have been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -149,20 +162,18 @@ namespace SpaceTradingGame
                         Console.Clear();
                         TerminalMenu(status);
                     }
-                } while (trades > 5);
+                } while (trades > 5 && status.inventorySize <= 20 && status.playerMoney > 0);
 
-              
-                    Console.Clear();
-                    Console.WriteLine("\nYou are out of trades at this terminal, you are now being returned to your ship\n");
-                    Console.WriteLine("Ship");
-                    Status.ship(status);
-               
+                ExitConditions(status, trades);
 
-            }else if (coordinates == (250,140)) //Tattooine
+
+            }
+            else if (coordinates == (250,140)) //Tattooine
             {
                 int currency = status.playerMoney;
                 int trades = status.totalTrades;
                 List<string> playerInventory = status.playerInventory;
+                List<int> playerInventoryPrice = status.playerInventoryPrice;
 
                 int lowGradeFuel = 1000;
                 int land = 500;
@@ -199,6 +210,7 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items[0];
                         playerInventory.Add(terminalItems[0]);
+                        playerInventoryPrice.Add(items[0]);
                         Console.Clear();
                         Console.WriteLine($"\n***{terminalItems[0]} have been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -212,6 +224,7 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items[1];
                         playerInventory.Add(terminalItems[1]);
+                        playerInventoryPrice.Add(items[1]);
                         Console.Clear();
                         Console.WriteLine($"\n***{terminalItems[1]} have been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -225,6 +238,7 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items [2];
                         playerInventory.Add(terminalItems[2]);
+                        playerInventoryPrice.Add(items[2]);
                         Console.Clear();
                         Console.WriteLine($"\n***{terminalItems[2]} have been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -238,6 +252,7 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items[3];
                         playerInventory.Add(terminalItems[3]);
+                        playerInventoryPrice.Add(items[3]);
                         Console.Clear();
                         Console.WriteLine($"\n***{terminalItems[3]} have been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -251,6 +266,7 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items[4];
                         playerInventory.Add(terminalItems[4]);
+                        playerInventoryPrice.Add(items[4]);
                         Console.Clear();
                         Console.WriteLine($"\n***{terminalItems[4]} have been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -265,18 +281,17 @@ namespace SpaceTradingGame
                         Console.Clear();
                         TerminalMenu(status);
                     }
-                } while (trades > 5);
+                } while (trades > 5 && status.inventorySize <= 20 && status.playerMoney > 0);
+
+                ExitConditions(status, trades);
 
 
-                Console.Clear();
-                Console.WriteLine("\nYou are out of trades at this terminal, you are now being returned to your ship\n");
-                Console.WriteLine("Ship");
-                Status.ship(status);
             }else if (coordinates == (164,300))//Alderan
             {
                 int currency = status.playerMoney;
                 int trades = status.totalTrades;
                 List<string> playerInventory = status.playerInventory;
+                List<int> playerInventoryPrice = status.playerInventoryPrice;
 
                 int lowGradeFuel = 500;
                 int land = 3000;
@@ -314,6 +329,7 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items[0];
                         playerInventory.Add(terminalItems[0]);
+                        playerInventoryPrice.Add(items[0]);
                         Console.Clear();
                         Console.WriteLine($"\n***{terminalItems[0]} has been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -327,6 +343,7 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items[1];
                         playerInventory.Add(terminalItems[1]);
+                        playerInventoryPrice.Add(items[1]);
                         Console.Clear();
                         Console.WriteLine($"\n***{terminalItems[1]} has been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -340,6 +357,7 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items[2];
                         playerInventory.Add(terminalItems[2]);
+                        playerInventoryPrice.Add(items[2]);
                         Console.Clear();
                         Console.WriteLine($"\n***{terminalItems[2]} has been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -353,6 +371,7 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items[3];
                         playerInventory.Add(terminalItems[3]);
+                        playerInventoryPrice.Add(items[3]);
                         Console.Clear();
                         Console.WriteLine($"\n***{terminalItems[3]} has been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -366,6 +385,7 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items[4];
                         playerInventory.Add(terminalItems[4]);
+                        playerInventoryPrice.Add(items[4]);
                         Console.Clear();
                         Console.WriteLine($"\n***{terminalItems[4]} have been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -380,18 +400,18 @@ namespace SpaceTradingGame
                         Console.Clear();
                         TerminalMenu(status);
                     }
-                } while (trades > 5);
+                } while (trades > 5 && status.inventorySize <= 20 && status.playerMoney > 0);
+
+                ExitConditions(status, trades);
 
 
-                Console.Clear();
-                Console.WriteLine("\nYou are out of trades at this terminal, you are now being returned to your ship\n");
-                Console.WriteLine("Ship");
-                Status.ship(status);
+                
             }else if (coordinates == (354,256)) // Sentinel
             {
                 int currency = status.playerMoney;
                 int trades = status.totalTrades;
                 List<string> playerInventory = status.playerInventory;
+                List<int> playerInventoryPrice = status.playerInventoryPrice;
 
                 int highGradeFuel = 1000;
                 int vitaminWater = 500;
@@ -428,6 +448,7 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items[0];
                         playerInventory.Add(terminalItems[0]);
+                        playerInventoryPrice.Add(items[0]);
                         Console.Clear();
                         Console.WriteLine($"\n***{terminalItems[0]} has been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -441,6 +462,7 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items[1];
                         playerInventory.Add(terminalItems[1]);
+                        playerInventoryPrice.Add(items[1]);
                         Console.Clear();
                         Console.WriteLine($"\n***{terminalItems[1]} has been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -454,6 +476,7 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items[2];
                         playerInventory.Add(terminalItems[2]);
+                        playerInventoryPrice.Add(items[2]);
                         Console.Clear();
                         Console.WriteLine($"\n***{terminalItems[2]} has been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -467,6 +490,7 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items[3];
                         playerInventory.Add(terminalItems[3]);
+                        playerInventoryPrice.Add(items[3]);
                         Console.Clear();
                         Console.WriteLine($"\n***{terminalItems[3]} has been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -480,6 +504,7 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items[4];
                         playerInventory.Add(terminalItems[4]);
+                        playerInventoryPrice.Add(items[4]);
                         Console.Clear();
                         Console.WriteLine($"\n***{terminalItems[4]} have been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -495,18 +520,16 @@ namespace SpaceTradingGame
                         Console.Clear();
                         TerminalMenu(status);
                     }
-                } while (trades > 5);
+                } while (trades > 5 && status.inventorySize <=20 && status.playerMoney > 0);
 
-
-                Console.Clear();
-                Console.WriteLine("\nYou are out of trades at this terminal, you are now being returned to your ship\n");
-                Console.WriteLine("Ship");
-                Status.ship(status);
+                ExitConditions(status, trades);
+           
             }else if (coordinates == (496,532))// September
             {
                 int currency = status.playerMoney;
                 int trades = status.totalTrades;
                 List<string> playerInventory = status.playerInventory;
+                List<int> playerInventoryPrice = status.playerInventoryPrice;
 
                 int highGradeFuel = 2500;
                 int land = 4000;
@@ -543,6 +566,7 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items[0];
                         playerInventory.Add(terminalItems[0]);
+                        playerInventoryPrice.Add(items[0]);
                         Console.Clear();
                         Console.WriteLine($"\n***{terminalItems[0]} has been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -556,6 +580,7 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items[1];
                         playerInventory.Add(terminalItems[1]);
+                        playerInventoryPrice.Add(items[1]);
                         Console.Clear();
                         Console.WriteLine($"\n***{terminalItems[1]} has been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -569,6 +594,7 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items[2];
                         playerInventory.Add(terminalItems[2]);
+                        playerInventoryPrice.Add(items[2]);
                         Console.Clear();
                         Console.WriteLine($"\n***{terminalItems[2]} has been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -582,6 +608,7 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items[3];
                         playerInventory.Add(terminalItems[3]);
+                        playerInventoryPrice.Add(items[3]);
                         Console.Clear();
                         Console.WriteLine($"\n***{terminalItems[3]} has been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -595,6 +622,7 @@ namespace SpaceTradingGame
                     {
                         status.playerMoney -= items[4];
                         playerInventory.Add(terminalItems[4]);
+                        playerInventoryPrice.Add(items[4]);
                         Console.Clear();
                         Console.WriteLine($"\n***{terminalItems[4]} have been added to your inventory!***");
                         Console.SetCursorPosition(0, 0);
@@ -610,32 +638,52 @@ namespace SpaceTradingGame
                         Console.Clear();
                         TerminalMenu(status);
                     }
-                } while (trades > 5);
+                } while (trades > 5 && status.inventorySize <= 20 && status.playerMoney > 0);
 
 
+                ExitConditions(status, trades);
+               
+            }
+        }
+
+        private static void ExitConditions(Status status, int trades)
+        {
+            List<string> playerInventory = status.playerInventory;
+            List<int> playerInventoryPrice = status.playerInventoryPrice;
+            if (trades <= 5)
+            {
                 Console.Clear();
                 Console.WriteLine("\nYou are out of trades at this terminal, you are now being returned to your ship\n");
                 Console.WriteLine("Ship");
                 Status.ship(status);
+
+            }
+            else if (status.inventorySize >= 20)
+            {
+                status.playerMoney += playerInventoryPrice[20];
+                playerInventory.RemoveAt(20);
+                playerInventoryPrice.RemoveAt(20);
+                Console.Clear();
+                Console.WriteLine("You have reached that max limit of your inventory (Totals 20 Items).");
+                Console.WriteLine("You are now being returned to your ship");
+                Status.ship(status);
+            }
+            else if (status.playerMoney < 0)
+            {
+                Console.Clear();
+                Console.WriteLine("You have ran out of credits and are now in debt. You Lose!!");
+                Console.Read();
+                Environment.Exit(0);
             }
         }
 
         public static void Sell(Status status)
         {
-            int highGradeFuel = 6000;
-            int shipMissles = 6000;
-            int lowGradeFuel = 2000;
-            int rareMetals = 7000;
-            int vitaminWater = 1000;
-            int upgradedNavigationSystem = 6000;
-            int virtualGameStation = 8000;
-            int halfThePlanet = 150000;
+            
             
             List<string> playerInventory = status.playerInventory;
-
-            int[] gameItems = new int[]
-            {status.fruit,status.meat, status.jewels,status.rifles,status.pistols,status.explosives,status.missiles, status.land, highGradeFuel,status.residents, status.miningTools,
-             shipMissles, lowGradeFuel,  rareMetals, vitaminWater, upgradedNavigationSystem,virtualGameStation, halfThePlanet, };
+            List<int> playerInventoryPrice = status.playerInventoryPrice;
+            
 
             if (status.coordinates == (183,147))
             {
@@ -650,17 +698,93 @@ namespace SpaceTradingGame
 
                     Console.SetCursorPosition(0, 2);
                     Console.WriteLine("Please select which item you want to sell");
+                   // Console.WriteLine("1) Return to Trade Terminal Main Menu");
                     for (int i = 0; i < playerInventory.Count; i++)
                     {
-
                         Console.Write($"{i + 1}) {playerInventory[i]}: ");
-                        Console.WriteLine(gameItems[i]*2);
+                        Console.WriteLine(playerInventoryPrice[i] * 2);
+
 
                     }
-                    Console.WriteLine("6) Return to Trade Terminal Main Menu");
                     int userInput = Convert.ToInt32(Console.ReadLine());
 
                     --status.totalTrades;
+                    if (userInput == 1)
+                    {
+                        status.playerMoney += playerInventoryPrice[0];
+                        playerInventory.RemoveAt(0);
+                        playerInventoryPrice.RemoveAt(playerInventoryPrice[0]);
+                        Console.Clear();
+                        Console.WriteLine($"\n***{playerInventory[0]} has been removed from  your inventory!***");
+                        Console.SetCursorPosition(0, 0);
+                        Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in Alpha Centuria 1");
+                        Console.SetCursorPosition(100, 0);
+                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
+                    }
+                    else if (userInput == 2)
+                    {
+                        status.playerMoney += playerInventoryPrice[1];
+                        playerInventory.RemoveAt(1);
+                        playerInventoryPrice.RemoveAt(playerInventoryPrice[1]);
+                        Console.Clear();
+                        Console.WriteLine($"\n***{playerInventory[1]} has been removed from  your inventory!***");
+                        Console.SetCursorPosition(0, 0);
+                        Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in Alpha Centuria 1");
+                        Console.SetCursorPosition(100, 0);
+                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
+                    }
+                    else if (userInput == 3)
+                    {
+                        status.playerMoney += playerInventoryPrice[2];
+                        playerInventory.RemoveAt(2);
+                        playerInventoryPrice.RemoveAt(playerInventoryPrice[2]);
+                        Console.Clear();
+                        Console.WriteLine($"\n***{playerInventory[2]} has been removed from  your inventory!***");
+                        Console.SetCursorPosition(0, 0);
+                        Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in Alpha Centuria 1");
+                        Console.SetCursorPosition(100, 0);
+                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
+                    }
+                    else if (userInput == 4)
+                    {
+                        status.playerMoney += playerInventoryPrice[3];
+                        playerInventory.RemoveAt(3);
+                        playerInventoryPrice.RemoveAt(playerInventoryPrice[3]);
+                        Console.Clear();
+                        Console.WriteLine($"\n***{playerInventory[3]} has been removed from  your inventory!***");
+                        Console.SetCursorPosition(0, 0);
+                        Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in Alpha Centuria 1");
+                        Console.SetCursorPosition(100, 0);
+                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
+                    }
+                    else if (userInput == 5)
+                    {
+                        status.playerMoney += playerInventoryPrice[4];
+                        playerInventory.RemoveAt(4);
+                        playerInventoryPrice.RemoveAt(playerInventoryPrice[4]);
+                        Console.Clear();
+                        Console.WriteLine($"\n***{playerInventory[4]} has been removed from  your inventory!***");
+                        Console.SetCursorPosition(0, 0);
+                        Console.WriteLine($"Credits: {status.playerMoney}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in Alpha Centuria 1");
+                        Console.SetCursorPosition(100, 0);
+                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
+
+                    }
+                    else if (userInput == 6)
+                    {
+                        Console.Clear();
+                        TerminalMenu(status);
+                    }
 
                 } while (status.totalTrades > 5);
             }       
@@ -681,6 +805,62 @@ namespace SpaceTradingGame
                 Console.Clear();
                 TerminalMenu(status);
             }
+        }
+        static string Nagivation(Status status )
+        {
+            int index = 0;
+            List<string> playerInventory = status.playerInventory;
+
+            for (int i = 0; i < playerInventory.Count; i++)
+            {
+                if (i == index)
+                {
+                    Console.BackgroundColor = ConsoleColor.Gray;
+                    Console.ForegroundColor = ConsoleColor.Black;
+                    Console.WriteLine(playerInventory[i]);
+
+                }
+                else
+                {
+
+                    Console.WriteLine(playerInventory[i]);
+
+                }
+                Console.ResetColor();
+
+            }
+
+            ConsoleKeyInfo ckey = Console.ReadKey();
+
+            if (ckey.Key == ConsoleKey.DownArrow)
+            {
+                if (index == playerInventory.Count - 1)
+                {
+                    index = 0;
+                }
+                else { index++; }
+
+            }
+            else if (ckey.Key == ConsoleKey.UpArrow)
+            {
+                if (index <= 0)
+                {
+                    index = playerInventory.Count - 1;
+
+                }
+                else { index--; }
+            }
+            else if (ckey.Key == ConsoleKey.Enter)
+            {
+                return playerInventory[index];
+            }
+            else
+            {
+                return "";
+            }
+            Console.Clear();
+            return "";
+
         }
     }
 }

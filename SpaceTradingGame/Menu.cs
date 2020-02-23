@@ -10,7 +10,7 @@ namespace SpaceTradingGame
 {
     class Menu
     {
-        public static void UserMenu()
+        public static void UserMenu(Status status)
         {
             var counter2 = 0;
             Console.SetCursorPosition(25, 9);
@@ -88,21 +88,22 @@ namespace SpaceTradingGame
 
         public static void New()
         {
-            using (StreamWriter sw = new StreamWriter(@"C:\Users\davon\source\repos\SpaceTradingGame\SpaceTradingGame\SaveFile.Txt"))
+            using (StreamWriter sw = new StreamWriter(@"C:\Users\turck\Documents\MSSA Cohort 8\cs projects\11FEB_SpaceTradingGame\SpaceTradingGame\SpaceTradingGame\SaveFile.Txt"))
             {
                 sw.WriteLine();
+               
             }
         }
 
         public static void Load()
         {
-            using (StreamReader sr = new StreamReader(@"C:\Users\davon\source\repos\SpaceTradingGame\SpaceTradingGame\SaveFile.Txt"))
+            using (StreamReader sr = new StreamReader(@"C:\Users\turck\Documents\MSSA Cohort 8\cs projects\11FEB_SpaceTradingGame\SpaceTradingGame\SpaceTradingGame\SaveFile.Txt"))
             {
                 sr.ReadLine();
             }           
         }
 
-        public static void Exit()
+        public static void Exit(Status status)
         {
             Console.WriteLine("Are you sure you want to exit? [Y/N]");
             var exit = Console.ReadLine();
@@ -117,7 +118,7 @@ namespace SpaceTradingGame
                 case "N":
                 case "n":
                     Console.Clear();
-                    UserMenu();
+                    UserMenu(status);
                     break;
 
             }
