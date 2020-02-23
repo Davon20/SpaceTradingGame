@@ -10,15 +10,18 @@ namespace SpaceTradingGame
 {
     class Program
     {
+       
         static void Main(string[] args)
         {
             Menu menu = new Menu();
             Menu.UserMenu();
             Status status = new Status();
             Status.ship(status);
-          
 
-            
+
+
+
         }
+        
     }
 }
