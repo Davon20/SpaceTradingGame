@@ -10,7 +10,7 @@ namespace SpaceTradingGame
 {
     class Menu
     {
-        public static void UserMenu()
+        public static void UserMenu(Status status)
         {
             var counter = 0;
             for (int i = 0; i < 50; i++)
@@ -28,10 +28,10 @@ namespace SpaceTradingGame
                 Thread.Sleep(150);
             }
 
-            SubMenu();
+            SubMenu(status);
         }
 
-        private static void SubMenu()
+        private static void SubMenu(Status status)
         {
             Console.SetCursorPosition(0, 0);
             Console.WriteLine("[1] New Game");
@@ -48,14 +48,14 @@ namespace SpaceTradingGame
                         case "1":
                             New();
                             Console.Clear();
-                            Status status = new Status();
+                           
                             Status.ship(status);
                             break;
                         case "2":
                             Load();
                             break;
                         case "3":
-                            Exit();
+                            Exit(status);
                             break;
                     }
 
@@ -66,7 +66,7 @@ namespace SpaceTradingGame
                     Console.WriteLine("Please enter either 1, 2, or 3");
                 }
                 Console.Clear();
-                SubMenu();
+                SubMenu(status);
             } while (true);
         }
 
@@ -87,7 +87,7 @@ namespace SpaceTradingGame
             }           
         }
 
-        public static void Exit()
+        public static void Exit(Status status)
         {
             Console.WriteLine("Are you sure you want to exit? [Y/N]");
             var exit = Console.ReadLine();
@@ -102,7 +102,7 @@ namespace SpaceTradingGame
                 case "N":
                 case "n":
                     Console.Clear();
-                    UserMenu();
+                    UserMenu(status);
                     break;
 
             }

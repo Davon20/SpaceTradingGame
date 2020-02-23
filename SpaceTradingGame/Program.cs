@@ -13,10 +13,10 @@ namespace SpaceTradingGame
        
         static void Main(string[] args)
         {
-            Menu menu = new Menu();
-            Menu.UserMenu();
             Status status = new Status();
-            Status.ship(status);
+            Menu menu = new Menu();
+            Menu.UserMenu(status);
+            //Status.ship(status);
 
 
 

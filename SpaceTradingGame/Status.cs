@@ -11,7 +11,7 @@ namespace SpaceTradingGame
     {
         public List<string> playerInventory = new List<string>() { "fruit", "meat", "jewels", "rifles", "pistols", "explosives", "missiles", "land", "residents", "miningTools" };
         public List<int> playerInventoryPrice = new List<int>() { 5, 10, 1000, 1500, 750, 2000, 2500, 5000, 3000, 1000 };
-        public int inventorySize = 10;
+        public  int inventorySize = 10;
 
 
         public int moves = 5;
