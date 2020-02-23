@@ -72,10 +72,8 @@ namespace SpaceTradingGame
                     Console.WriteLine("Please select which item you want to purchase");
                     for (int i = 0; i < items.Length; i++)
                     {
-
                         Console.Write($"{i + 1}) {items[i]}: ");
                         Console.WriteLine(terminalItems[i]);
-
                     }
                     Console.WriteLine("6) Return to Trade Terminal Main Menu");
                     int userInput = Convert.ToInt32(Console.ReadLine());
@@ -664,13 +662,8 @@ namespace SpaceTradingGame
 
                     --status.totalTrades;
 
-
                 } while (status.totalTrades > 5);
-            }
-
-
-            
-                    
+            }       
         }
 
         public static void Exit (Status status)

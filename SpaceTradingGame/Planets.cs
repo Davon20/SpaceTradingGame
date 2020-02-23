@@ -51,6 +51,7 @@ namespace SpaceTradingGame
             //int art = 4000;
             //int cigars = 2000; 
 
+            //(int, int) coordinates = (164, 300);
 
           
         }

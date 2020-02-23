@@ -14,11 +14,9 @@ namespace SpaceTradingGame
         {
             Menu menu = new Menu();
             Menu.UserMenu();
-            Status status = new Status();
-            Status.ship(status);
-          
 
-            
+            Status status = new Status();
+            Status.ship(status);            
         }
     }
 }
