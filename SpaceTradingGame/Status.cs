@@ -71,6 +71,7 @@ namespace SpaceTradingGame
             (int, int) shipCoordinates = status.coordinates;
 
             List<string> playerInv = status.playerInventory;
+
             
             Console.WriteLine("1: Check Inventory" + "\n2: Travel");
             string input = Console.ReadLine();
@@ -102,6 +103,12 @@ namespace SpaceTradingGame
                         Console.BackgroundColor = ConsoleColor.DarkGray;
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.Clear();
+                        Console.SetCursorPosition(0, 0);
+                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
+                        Console.SetCursorPosition(35, 0);
+                        Console.WriteLine($"Welcome to the Trade Terminal in Alpha Centuria 1");
+                        Console.SetCursorPosition(100, 0);
+                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
                         Console.SetCursorPosition(0, 1);
                         Console.WriteLine("\nWelcome to Alpha Centuria, a low income planet. Feel free to trade at your leisure.");
                         tradingTerminal.TerminalMenu(status);
