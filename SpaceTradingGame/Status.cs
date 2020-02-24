@@ -40,7 +40,7 @@ namespace SpaceTradingGame
             }
             if (moves == 0)
             {
-                for (int j = 0; years < 65; j++)
+                for (int j = 0; years < 19; j++)
                 {
                     Console.WriteLine($"You are out of moves and are now {years += 1} years old.");
                 }
