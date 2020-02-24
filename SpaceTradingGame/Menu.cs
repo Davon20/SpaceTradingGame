@@ -34,7 +34,7 @@ namespace SpaceTradingGame
                     case 3: Console.Write(margin + intro, Console.BackgroundColor = ConsoleColor.White); break;
                     case 2: Console.Write(margin + intro, Console.ForegroundColor = ConsoleColor.Black); break;
                 }
-                Thread.Sleep(100);
+                Thread.Sleep(10);
                 counter2++;
             }
 
@@ -62,9 +62,6 @@ namespace SpaceTradingGame
                 {
                     New();
                     Console.Clear();
-
-                    Status status = new Status();
-                    Status.ship(status);
                     break;
                 }
                 else if (uI == "2")
@@ -74,21 +71,21 @@ namespace SpaceTradingGame
                 }
                 else if (uI == "3")
                 {
-                    Exit();
+                    Exit(status);
                     break;
                 }
                 else
                 {
                     Console.WriteLine("Please only enter 1, 2, or 3!");
                     Console.Clear();
-                    UserMenu();
+                    UserMenu(status);
                 }                
             } while (true);
         }
 
         public static void New()
         {
-            using (StreamWriter sw = new StreamWriter(@"C:\Users\turck\Documents\MSSA Cohort 8\cs projects\11FEB_SpaceTradingGame\SpaceTradingGame\SpaceTradingGame\SaveFile.Txt"))
+            using (StreamWriter sw = new StreamWriter(@"C:\Users\davon\source\repos\SpaceTradingGame\SpaceTradingGame\SaveFile.Txt"))
             {
                 sw.WriteLine();
                
@@ -97,7 +94,7 @@ namespace SpaceTradingGame
 
         public static void Load()
         {
-            using (StreamReader sr = new StreamReader(@"C:\Users\turck\Documents\MSSA Cohort 8\cs projects\11FEB_SpaceTradingGame\SpaceTradingGame\SpaceTradingGame\SaveFile.Txt"))
+            using (StreamReader sr = new StreamReader(@"C:\Users\davon\source\repos\SpaceTradingGame\SpaceTradingGame\SaveFile.Txt"))
             {
                 sr.ReadLine();
             }           

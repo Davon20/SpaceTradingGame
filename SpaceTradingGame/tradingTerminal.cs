@@ -300,7 +300,7 @@ namespace SpaceTradingGame
                 int cigars = 2000;
 
 
-                string[] terminalItems = new string[] { "Low-Grade Fuel", "Alderan Land", "Alderan Residents", "art", "cigars", };
+                string[] terminalItems = new string[] { "Low-Grade Fuel", "Alderan Land", "Alderan Residents", "art", "cigars"};
                 int[] items = new int[] { lowGradeFuel, land, residents, art, cigars };
 
                 do
@@ -553,10 +553,8 @@ namespace SpaceTradingGame
                     Console.WriteLine("Please select which item you want to purchase");
                     for (int i = 0; i < items.Length; i++)
                     {
-
                         Console.Write($"{i + 1}) {items[i]}: ");
                         Console.WriteLine(terminalItems[i]);
-
                     }
                     Console.WriteLine("6) Return to Trade Terminal Main Menu");
                     int userInput = Convert.ToInt32(Console.ReadLine());
@@ -639,8 +637,6 @@ namespace SpaceTradingGame
                         TerminalMenu(status);
                     }
                 } while (trades > 5 && status.inventorySize <= 20 && status.playerMoney > 0);
-
-
                 ExitConditions(status, trades);
                
             }
@@ -698,7 +694,6 @@ namespace SpaceTradingGame
 
                     Console.SetCursorPosition(0, 2);
                     Console.WriteLine("Please select which item you want to sell");
-                   // Console.WriteLine("1) Return to Trade Terminal Main Menu");
                     for (int i = 0; i < playerInventory.Count; i++)
                     {
                         Console.Write($"{i + 1}) {playerInventory[i]}: ");
