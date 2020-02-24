@@ -749,6 +749,7 @@ namespace SpaceTradingGame
 
                     Console.SetCursorPosition(0, 3);
                     Console.WriteLine("Please select which item you want to sell");
+                    Console.WriteLine("You can only sell the first 5 Items in your inventory");
                     Console.WriteLine("+-+-+-Press <0> to return to the Trade Terminal Main Menu -+-+-+");
                     
 
@@ -761,6 +762,14 @@ namespace SpaceTradingGame
 
                     }
                     int userInput = Convert.ToInt32(Console.ReadLine());
+                    if (userInput > 5)
+                    {
+                        Console.Clear();
+                        Console.SetCursorPosition(0,2);
+                        Console.WriteLine("********Please enter a valid value from 0-5*************");
+                        Sell(status);
+                        
+                    }
 
                     --status.totalTrades;
                     if (userInput == 0)
@@ -843,84 +852,10 @@ namespace SpaceTradingGame
                         Console.SetCursorPosition(100, 0);
                         Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
 
-                    }
-                    else if (userInput == 6)
-                    {
-                        status.playerMoney += playerInventoryPrice[5]*2;
-                        playerInventory.RemoveAt(5);
-                        playerInventoryPrice.RemoveAt(5);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[5]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in Alpha Centuria 1");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
-                    else if (userInput == 7)
-                    {
-                        status.playerMoney += playerInventoryPrice[6]*2;
-                        playerInventory.RemoveAt(6);
-                        playerInventoryPrice.RemoveAt(6);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[6]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in Alpha Centuria 1");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
-                    else if (userInput == 8)
-                    {
-                        status.playerMoney += playerInventoryPrice[7]*2;
-                        playerInventory.RemoveAt(7);
-                        playerInventoryPrice.RemoveAt(7);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[7]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in Alpha Centuria 1");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
-                    else if (userInput == 9)
-                    {
-                        status.playerMoney += playerInventoryPrice[8]*2;
-                        playerInventory.RemoveAt(8);
-                        playerInventoryPrice.RemoveAt(8);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[8]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in Alpha Centuria 1");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
-                    else if (userInput == 10)
-                    {
-                        status.playerMoney += playerInventoryPrice[9]*2;
-                        playerInventory.RemoveAt(9);
-                        playerInventoryPrice.RemoveAt(9);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[9]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in Alpha Centuria 1");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
-
+                    } 
+                   
                 } while (status.totalTrades > 5 && WinConditionOne(status));
+                
 
                 SellingExitConditions(status);
             }
@@ -937,6 +872,7 @@ namespace SpaceTradingGame
 
                     Console.SetCursorPosition(0, 3);
                     Console.WriteLine("Please select which item you want to sell");
+                    Console.WriteLine("You can only sell the first 5 items in your inventory");
                     Console.WriteLine("+-+-+-Press <0> to return to the Trade Terminal Main Menu -+-+-+");
 
 
@@ -949,6 +885,14 @@ namespace SpaceTradingGame
 
                     }
                     int userInput = Convert.ToInt32(Console.ReadLine());
+                    if (userInput > 5)
+                    {
+                        Console.Clear();
+                        Console.SetCursorPosition(0, 2);
+                        Console.WriteLine("********Please enter a valid value from 0-5*************");
+                        Sell(status);
+
+                    }
 
                     --status.totalTrades;
                     if (userInput == 0)
@@ -1032,81 +976,8 @@ namespace SpaceTradingGame
                         Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
 
                     }
-                    else if (userInput == 6)
-                    {
-                        status.playerMoney += playerInventoryPrice[5] * 3;
-                        playerInventory.RemoveAt(5);
-                        playerInventoryPrice.RemoveAt(5);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[5]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in Tattoine");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
-                    else if (userInput == 7)
-                    {
-                        status.playerMoney += playerInventoryPrice[6] * 3;
-                        playerInventory.RemoveAt(6);
-                        playerInventoryPrice.RemoveAt(6);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[6]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in Tattoine");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
-                    else if (userInput == 8)
-                    {
-                        status.playerMoney += playerInventoryPrice[7] * 3;
-                        playerInventory.RemoveAt(7);
-                        playerInventoryPrice.RemoveAt(7);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[7]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in Tattoine");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
-                    else if (userInput == 9)
-                    {
-                        status.playerMoney += playerInventoryPrice[8] * 3;
-                        playerInventory.RemoveAt(8);
-                        playerInventoryPrice.RemoveAt(8);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[8]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in Tattoine");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
-                    else if (userInput == 10)
-                    {
-                        status.playerMoney += playerInventoryPrice[9] * 3;
-                        playerInventory.RemoveAt(9);
-                        playerInventoryPrice.RemoveAt(9);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[9]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in Tattoine");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
+                    
+                    
 
                 } while (status.totalTrades > 5 && WinConditionOne(status));
 
@@ -1125,6 +996,7 @@ namespace SpaceTradingGame
 
                     Console.SetCursorPosition(0, 3);
                     Console.WriteLine("Please select which item you want to sell");
+                    Console.WriteLine("You can only sell the first 5 items in your inventory");
                     Console.WriteLine("+-+-+-Press <0> to return to the Trade Terminal Main Menu -+-+-+");
 
 
@@ -1137,6 +1009,14 @@ namespace SpaceTradingGame
 
                     }
                     int userInput = Convert.ToInt32(Console.ReadLine());
+                    if (userInput > 5)
+                    {
+                        Console.Clear();
+                        Console.SetCursorPosition(0, 2);
+                        Console.WriteLine("********Please enter a valid value from 0-5*************");
+                        Sell(status);
+
+                    }
 
                     --status.totalTrades;
                     if (userInput == 0)
@@ -1220,81 +1100,7 @@ namespace SpaceTradingGame
                         Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
 
                     }
-                    else if (userInput == 6)
-                    {
-                        status.playerMoney += playerInventoryPrice[5] * 7;
-                        playerInventory.RemoveAt(5);
-                        playerInventoryPrice.RemoveAt(5);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[5]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in Sentinel");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
-                    else if (userInput == 7)
-                    {
-                        status.playerMoney += playerInventoryPrice[6] * 7;
-                        playerInventory.RemoveAt(6);
-                        playerInventoryPrice.RemoveAt(6);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[6]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in Sentinel");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
-                    else if (userInput == 8)
-                    {
-                        status.playerMoney += playerInventoryPrice[7] * 7;
-                        playerInventory.RemoveAt(7);
-                        playerInventoryPrice.RemoveAt(7);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[7]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in Sentinel");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
-                    else if (userInput == 9)
-                    {
-                        status.playerMoney += playerInventoryPrice[8] * 7;
-                        playerInventory.RemoveAt(8);
-                        playerInventoryPrice.RemoveAt(8);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[8]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in Sentinel");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
-                    else if (userInput == 10)
-                    {
-                        status.playerMoney += playerInventoryPrice[9] * 7;
-                        playerInventory.RemoveAt(9);
-                        playerInventoryPrice.RemoveAt(9);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[9]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in Sentinel");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
+   
 
                 } while (status.totalTrades > 5 && WinConditionOne(status));
 
@@ -1313,6 +1119,7 @@ namespace SpaceTradingGame
 
                     Console.SetCursorPosition(0, 3);
                     Console.WriteLine("Please select which item you want to sell");
+                    Console.WriteLine("You Can only sell the first 5 items in your inventory");
                     Console.WriteLine("+-+-+-Press <0> to return to the Trade Terminal Main Menu -+-+-+");
 
 
@@ -1325,6 +1132,14 @@ namespace SpaceTradingGame
 
                     }
                     int userInput = Convert.ToInt32(Console.ReadLine());
+                    if (userInput > 5)
+                    {
+                        Console.Clear();
+                        Console.SetCursorPosition(0, 2);
+                        Console.WriteLine("********Please enter a valid value from 0-5*************");
+                        Sell(status);
+
+                    }
 
                     --status.totalTrades;
                     if (userInput == 0)
@@ -1408,81 +1223,7 @@ namespace SpaceTradingGame
                         Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
 
                     }
-                    else if (userInput == 6)
-                    {
-                        status.playerMoney += playerInventoryPrice[5] * 5;
-                        playerInventory.RemoveAt(5);
-                        playerInventoryPrice.RemoveAt(5);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[5]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in Alderan");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
-                    else if (userInput == 7)
-                    {
-                        status.playerMoney += playerInventoryPrice[6] * 5;
-                        playerInventory.RemoveAt(6);
-                        playerInventoryPrice.RemoveAt(6);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[6]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in Alderan");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
-                    else if (userInput == 8)
-                    {
-                        status.playerMoney += playerInventoryPrice[7] * 5;
-                        playerInventory.RemoveAt(7);
-                        playerInventoryPrice.RemoveAt(7);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[7]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in Alderan");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
-                    else if (userInput == 9)
-                    {
-                        status.playerMoney += playerInventoryPrice[8] * 5;
-                        playerInventory.RemoveAt(8);
-                        playerInventoryPrice.RemoveAt(8);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[8]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in Alderan");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
-                    else if (userInput == 10)
-                    {
-                        status.playerMoney += playerInventoryPrice[9] * 5;
-                        playerInventory.RemoveAt(9);
-                        playerInventoryPrice.RemoveAt(9);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[9]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in Alderan");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
+
 
                 } while (status.totalTrades > 5 && WinConditionOne(status));
 
@@ -1501,6 +1242,7 @@ namespace SpaceTradingGame
 
                     Console.SetCursorPosition(0, 3);
                     Console.WriteLine("Please select which item you want to sell");
+                    Console.WriteLine("You can only sell the first 5 items in your inventory");
                     Console.WriteLine("+-+-+-Press <0> to return to the Trade Terminal Main Menu -+-+-+");
 
 
@@ -1513,6 +1255,14 @@ namespace SpaceTradingGame
 
                     }
                     int userInput = Convert.ToInt32(Console.ReadLine());
+                    if (userInput > 5)
+                    {
+                        Console.Clear();
+                        Console.SetCursorPosition(0, 2);
+                        Console.WriteLine("********Please enter a valid value from 0-5*************");
+                        Sell(status);
+
+                    }
 
                     --status.totalTrades;
                     if (userInput == 0)
@@ -1596,81 +1346,7 @@ namespace SpaceTradingGame
                         Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
 
                     }
-                    else if (userInput == 6)
-                    {
-                        status.playerMoney += playerInventoryPrice[5] * 10;
-                        playerInventory.RemoveAt(5);
-                        playerInventoryPrice.RemoveAt(5);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[5]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in September");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
-                    else if (userInput == 7)
-                    {
-                        status.playerMoney += playerInventoryPrice[6] * 10;
-                        playerInventory.RemoveAt(6);
-                        playerInventoryPrice.RemoveAt(6);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[6]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in September");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
-                    else if (userInput == 8)
-                    {
-                        status.playerMoney += playerInventoryPrice[7] * 10;
-                        playerInventory.RemoveAt(7);
-                        playerInventoryPrice.RemoveAt(7);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[7]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in September");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
-                    else if (userInput == 9)
-                    {
-                        status.playerMoney += playerInventoryPrice[8] * 10;
-                        playerInventory.RemoveAt(8);
-                        playerInventoryPrice.RemoveAt(8);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[8]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in September");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
-                    else if (userInput == 10)
-                    {
-                        status.playerMoney += playerInventoryPrice[9] * 10;
-                        playerInventory.RemoveAt(9);
-                        playerInventoryPrice.RemoveAt(9);
-                        status.inventorySize--;
-                        Console.Clear();
-                        Console.WriteLine($"\n***{playerInventory[9]} has been removed from  your inventory!***");
-                        Console.SetCursorPosition(0, 0);
-                        Console.WriteLine($"Credits: {status.playerMoney} Age: {status.years}");
-                        Console.SetCursorPosition(35, 0);
-                        Console.WriteLine($"Welcome to the Trade Terminal in September");
-                        Console.SetCursorPosition(100, 0);
-                        Console.WriteLine($"Moves Remaining : {status.totalTrades - 5}");
-                    }
+          
 
                 } while (status.totalTrades > 5 && WinConditionOne(status));
 
