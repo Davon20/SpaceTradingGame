@@ -34,7 +34,7 @@ namespace SpaceTradingGame
                     case 3: Console.Write(margin + intro, Console.BackgroundColor = ConsoleColor.White); break;
                     case 2: Console.Write(margin + intro, Console.ForegroundColor = ConsoleColor.Black); break;
                 }
-                Thread.Sleep(100);
+                Thread.Sleep(10);
                 counter2++;
             }
 
@@ -92,7 +92,7 @@ namespace SpaceTradingGame
 
         public static void New()
         {
-            using (StreamWriter sw = new StreamWriter(@"C:\Users\turck\Documents\MSSA Cohort 8\cs projects\11FEB_SpaceTradingGame\SpaceTradingGame\SpaceTradingGame\SaveFile.Txt"))
+            using (StreamWriter sw = new StreamWriter(@"C:\Users\davon\source\repos\SpaceTradingGame\SpaceTradingGame\SaveFile.Txt"))
             {
                 sw.WriteLine();
                
@@ -101,7 +101,7 @@ namespace SpaceTradingGame
 
         public static void Load()
         {
-            using (StreamReader sr = new StreamReader(@"C:\Users\turck\Documents\MSSA Cohort 8\cs projects\11FEB_SpaceTradingGame\SpaceTradingGame\SpaceTradingGame\SaveFile.Txt"))
+            using (StreamReader sr = new StreamReader(@"C:\Users\davon\source\repos\SpaceTradingGame\SpaceTradingGame\SaveFile.Txt"))
             {
                 sr.ReadLine();
             }           
