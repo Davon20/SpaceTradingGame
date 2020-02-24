@@ -15,10 +15,9 @@ namespace SpaceTradingGame
         {
             Status status = new Status();
             Menu menu = new Menu();
-            Menu.UserMenu();
+            Menu.UserMenu(status);
 
-            Status status = new Status();
-            Status.ship(status);            
+                     
         }
         
     }

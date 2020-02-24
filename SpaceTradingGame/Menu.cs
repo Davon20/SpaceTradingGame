@@ -63,9 +63,13 @@ namespace SpaceTradingGame
                     New();
                     Console.Clear();
 
-                    Status status = new Status();
-                    Status.ship(status);
-                    break;
+                
+                        Status.ship(status);
+                        break;
+                    
+                   
+
+  
                 }
                 else if (uI == "2")
                 {
@@ -74,14 +78,14 @@ namespace SpaceTradingGame
                 }
                 else if (uI == "3")
                 {
-                    Exit();
+                    Exit(status);
                     break;
                 }
                 else
                 {
                     Console.WriteLine("Please only enter 1, 2, or 3!");
                     Console.Clear();
-                    UserMenu();
+                    UserMenu(status);
                 }                
             } while (true);
         }
